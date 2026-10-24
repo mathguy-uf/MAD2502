@@ -1,0 +1,16 @@
+event_name,category,attendance,cost,location_type,rating
+Gator Jazz Night,Music,180,0,Indoor,4.6
+Lake Alice Nature Walk,Outdoors,42,0,Outdoor,4.8
+Student Coding Jam,Technology,95,5,Indoor,4.4
+Intramural Soccer Final,Sports,240,0,Outdoor,4.5
+Museum After Hours,Arts,130,8,Indoor,4.7
+Campus Farmers Market,Community,210,0,Outdoor,4.3
+Python Study Session,Academic,58,0,Indoor,4.1
+Sunset Yoga,Wellness,76,3,Outdoor,
+Open Mic Night,Music,115,2,Indoor,4.2
+Robotics Showcase,Technology,165,0,Indoor,4.6
+Charity 5K,Sports,310,15,Outdoor,4.8
+Poetry Reading,Arts,64,0,Indoor,
+Research Poster Day,Academic,145,0,Indoor,4.5
+Food Truck Rally,Community,275,6,Outdoor,4.4
+Mindfulness Workshop,Wellness,51,0,Indoor,4.0
