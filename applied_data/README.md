@@ -1,133 +1,178 @@
-# Applied Data
+# Applied Data — Introduction to Data Science
 
-This section connects the Python ideas from lecture to data that come from files, APIs, and the web.
+This section is the **data-science on-ramp** for MAD 2502. It assumes this may be your first experience with Python, Jupyter, pandas, APIs, and web data.
+
+Every notebook is designed to be **standalone**. You can open one without completing all the earlier notebooks first, although the order below is recommended for beginners.
 
 [← Return to the course website](../)
 
-## Start here
+## Recommended learning path
 
-Work through the first three tutorials in order if these tools are new to you. The **Data Rescue Kit** is a reference notebook: jump to the section that matches the problem you are having.
+| Step | Tutorial | Best for |
+|---|---|---|
+| **0** | [Data Science Start Here](00_data_science_start_here.ipynb) | First exposure to Jupyter, Python types, lists, dictionaries, DataFrames, rows/columns, and debugging. |
+| **1** | [pandas Basics](02_pandas_basics.ipynb) | Learning how to inspect, filter, summarize, graph, and save tabular data. |
+| **2** | [eBird API](01_ebird_api.ipynb) | Learning how Python requests data from an API and turns JSON into a DataFrame. |
+| **3** | [Statistics Villains](03_statistics_villains.ipynb) | Learning how an HTML table becomes a DataFrame through web scraping. |
+| **4** | [Data Rescue Kit](04_data_rescue_kit.ipynb) | Fixing common file, type, missing-value, date, duplicate, JSON, and DataFrame problems. |
 
-| Step | Tutorial | View | Run in Colab | Launch JupyterLab |
-|---|---|---|---|---|
-| **1** | eBird API | [View notebook](01_ebird_api.ipynb) | [Run in Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/applied_data/01_ebird_api.ipynb) | [Launch Binder](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/applied_data/01_ebird_api.ipynb) |
-| **2** | pandas Basics | [View notebook](02_pandas_basics.ipynb) | [Run in Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/applied_data/02_pandas_basics.ipynb) | [Launch Binder](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/applied_data/02_pandas_basics.ipynb) |
-| **3** | Statistics Villains | [View notebook](03_statistics_villains.ipynb) | [Run in Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/applied_data/03_statistics_villains.ipynb) | [Launch Binder](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/applied_data/03_statistics_villains.ipynb) |
-| **4** | Data Rescue Kit | [View notebook](04_data_rescue_kit.ipynb) | [Run in Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/applied_data/04_data_rescue_kit.ipynb) | [Launch Binder](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/applied_data/04_data_rescue_kit.ipynb) |
+## Three ways to use each notebook
 
-## How every MAD 2502 tutorial works
+### View on GitHub
+Read the notebook and saved code without running it.
 
-The examples change, but the learning rhythm stays the same:
+### Run in Colab
+Usually the easiest option for one notebook. The tutorials are written so they do not require a local clone whenever possible.
 
-**Understand → Predict → Run → Change → Use → Practice → Connect**
+### Launch Binder/JupyterLab
+Open the repository in a temporary browser-based JupyterLab environment.
 
-1. **Understand** — learn one new idea and why it matters.
-2. **Predict** — decide what you think the code or data operation will do before executing it.
-3. **Run** — execute the example and compare the actual result with your prediction.
-4. **Change** — modify one controlled piece and predict the new result.
-5. **Use** — apply the idea to answer a slightly more realistic question.
-6. **Practice** — complete short problems without simply copying the worked example.
-7. **Connect** — identify where the idea appears elsewhere in the course or in your capstone.
+For repeated local work, clone the repository and use `git pull` to get updates.
 
-The goal is not to copy working code. The goal is to understand it well enough to **predict it, modify it, and reuse it**.
+---
 
-The complete instructor pattern is documented in [`TEACHING_PATTERN.md`](../TEACHING_PATTERN.md).
+# 0. Data Science Start Here
 
-## 1. eBird API
+Start here if Python is new.
 
-Learn how a program requests data from an API:
+This notebook explains:
 
-**API key → endpoint → HTTP request → JSON → DataFrame → question → result**
+- Markdown cells vs. code cells;
+- Shift + Enter;
+- the Jupyter kernel;
+- variables;
+- `int`, `float`, `str`, and `bool`;
+- lists;
+- dictionaries;
+- why APIs often return lists of dictionaries;
+- DataFrames;
+- rows and columns;
+- `head()`, `shape`, `columns`, and `dtypes`;
+- a first grouped summary;
+- how to read an error without panicking.
 
-The notebook includes both live eBird requests and an offline practice response, so you can understand JSON and DataFrames even before your API key works.
+The main idea is that you do **not** need to learn all of Python before doing data science. You learn Python by using it to answer questions.
 
-Topics include:
+# 1. pandas Basics
 
-- keeping API keys out of GitHub;
-- endpoints, headers, and parameters;
-- `requests.get()` and `raise_for_status()`;
-- lists of dictionaries and JSON;
-- turning JSON into a DataFrame;
-- the difference between returned records and bird counts;
-- missing `howMany` values;
-- reusable API functions;
-- questions to ask before using an API in a capstone project.
+This is the first full tabular-data tutorial.
 
-## 2. pandas Basics
+It includes a small fictional campus-events dataset and covers:
 
-Learn pandas independently of the web so you can focus on the DataFrame itself. A small fictional campus-events CSV is included in `data/campus_events.csv`.
-
-Topics include:
-
-- `pd.read_csv()`;
-- `head()`, `shape`, `columns`, `info()`, and `dtypes`;
-- selecting rows and columns;
-- Boolean filtering with multiple conditions;
+- loading CSV data locally or directly from GitHub;
+- reading data in Colab without requiring the full repository;
+- inspecting rows, columns, types, and missing values;
+- selecting columns;
+- Boolean filtering;
 - sorting;
-- missing values;
-- creating new columns;
 - `value_counts()`;
-- grouped summaries with `groupby()` and `agg()`;
-- means, medians, counts, and sums;
-- a labeled Matplotlib graph;
-- exporting a cleaned summary CSV;
-- six practice questions.
+- grouped summaries;
+- mean and median;
+- missing-value decisions;
+- one labeled Matplotlib graph;
+- exporting a summary CSV.
 
-The data-analysis workflow inside the larger teaching pattern is:
+The beginner workflow is:
 
 **inspect → ask → select → compute → check → communicate**
 
-## 3. Statistics Villains
+# 2. eBird API
 
-Apply pandas to an HTML table from the course Statistics Villains page.
+Learn the path:
 
-**website → HTML → table → DataFrame → cleaning → questions**
+**API key → request → JSON → DataFrame → question → result**
 
-The notebook walks through:
+The notebook includes a small offline response so students can understand the objects before a live API key works.
 
-- checking `robots.txt`;
-- requesting the page with `requests`;
-- looking at raw HTML;
-- understanding that `pd.read_html()` returns a list of tables;
-- inspecting a table before cleaning it;
+Important beginner ideas include:
+
+- what an endpoint is;
+- headers vs. parameters;
+- species and region codes;
+- JSON as Python lists/dictionaries;
+- one API record vs. one bird;
+- missing `howMany` values;
+- why API data are not automatically a census or population estimate;
+- writing a reusable request function.
+
+# 3. Statistics Villains
+
+This tutorial adds one new challenge: the table begins on a webpage.
+
+The workflow is:
+
+**website → HTML → table → DataFrame → cleaning → analysis**
+
+It introduces:
+
+- `robots.txt`;
+- `requests.get()`;
+- raw HTML;
+- `pd.read_html()`;
+- why a webpage can contain several tables;
 - cleaning column names;
-- converting text-formatted money to numeric data;
-- descriptive summaries and sorting;
-- saving a cleaned CSV;
+- converting text-formatted numeric values;
+- summaries and sorting;
 - deciding when an API or downloadable file is preferable to scraping.
 
-## 4. Data Rescue Kit
+# 4. Data Rescue Kit
 
-This is the notebook to open when your own project data start behaving strangely.
+Use this notebook when your own project data behave strangely.
 
-It contains worked examples for:
+It contains worked repairs for:
 
 - Python cannot find my file;
-- numbers are stored as strings;
-- dollar signs and commas break numeric conversion;
+- numbers are stored as text;
+- `$` and commas break numeric conversion;
 - missing values;
 - bad column names;
 - duplicate rows;
 - dates are not recognized as dates;
-- combining several tables;
+- combining tables;
 - nested JSON;
-- unexpectedly empty DataFrames;
-- checking object types and column types;
-- a repeatable debugging routine.
+- empty DataFrames;
+- object and column types.
 
-Because this notebook is a reference rather than a linear lecture, each repair uses a smaller version of the same pattern:
+The goal is diagnosis, not memorization.
 
-**Understand the problem → Predict the cause → Run a diagnosis → Change/fix it → Verify the result**
+---
 
-## A capstone habit
+# The MAD 2502 data-science workflow
 
-When you use a new data source, write down four things in your project journal:
+Most projects in the course eventually use some version of this cycle:
 
-1. **Where did the data come from?** Include the URL, API, dataset, or citation.
-2. **What does one row or record represent?**
-3. **What cleaning or assumptions did you make?**
-4. **What question can this data actually answer?**
+```text
+question
+   ↓
+get data
+   ↓
+inspect
+   ↓
+clean
+   ↓
+analyze
+   ↓
+visualize
+   ↓
+interpret
+   ↓
+revise question
+```
 
-Those notes make the final report much easier to write and help you avoid overstating what the data mean.
+A beginner should be able to explain each arrow in plain English before adding more complicated methods.
+
+# Connection to the capstone
+
+When using a new data source, write down:
+
+1. Where did the data come from?
+2. What does one row or record represent?
+3. Which columns matter for the question?
+4. What values are missing?
+5. What cleaning decisions did you make?
+6. What can the data actually support you saying?
+7. What is the next concrete Python result you want?
+
+See the [Capstone Start Here guide](../capstone/00_start_here.md) when you are ready to apply the workflow to your own project.
 
 [← Return to the course website](../)
