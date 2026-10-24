@@ -15,6 +15,24 @@ Work through the first three tutorials in order if these tools are new to you. T
 | **3** | Statistics Villains | [View notebook](03_statistics_villains.ipynb) | [Run in Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/applied_data/03_statistics_villains.ipynb) | [Launch Binder](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/applied_data/03_statistics_villains.ipynb) |
 | **4** | Data Rescue Kit | [View notebook](04_data_rescue_kit.ipynb) | [Run in Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/applied_data/04_data_rescue_kit.ipynb) | [Launch Binder](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/applied_data/04_data_rescue_kit.ipynb) |
 
+## How every MAD 2502 tutorial works
+
+The examples change, but the learning rhythm stays the same:
+
+**Understand → Predict → Run → Change → Use → Practice → Connect**
+
+1. **Understand** — learn one new idea and why it matters.
+2. **Predict** — decide what you think the code or data operation will do before executing it.
+3. **Run** — execute the example and compare the actual result with your prediction.
+4. **Change** — modify one controlled piece and predict the new result.
+5. **Use** — apply the idea to answer a slightly more realistic question.
+6. **Practice** — complete short problems without simply copying the worked example.
+7. **Connect** — identify where the idea appears elsewhere in the course or in your capstone.
+
+The goal is not to copy working code. The goal is to understand it well enough to **predict it, modify it, and reuse it**.
+
+The complete instructor pattern is documented in [`TEACHING_PATTERN.md`](../TEACHING_PATTERN.md).
+
 ## 1. eBird API
 
 Learn how a program requests data from an API:
@@ -55,7 +73,7 @@ Topics include:
 - exporting a cleaned summary CSV;
 - six practice questions.
 
-The central workflow is:
+The data-analysis workflow inside the larger teaching pattern is:
 
 **inspect → ask → select → compute → check → communicate**
 
@@ -75,7 +93,6 @@ The notebook walks through:
 - cleaning column names;
 - converting text-formatted money to numeric data;
 - descriptive summaries and sorting;
-- plotting a distribution;
 - saving a cleaned CSV;
 - deciding when an API or downloadable file is preferable to scraping.
 
@@ -98,7 +115,9 @@ It contains worked examples for:
 - checking object types and column types;
 - a repeatable debugging routine.
 
-The goal is not to memorize every pandas command. The goal is to diagnose what kind of problem you have and then choose the appropriate tool.
+Because this notebook is a reference rather than a linear lecture, each repair uses a smaller version of the same pattern:
+
+**Understand the problem → Predict the cause → Run a diagnosis → Change/fix it → Verify the result**
 
 ## A capstone habit
 
