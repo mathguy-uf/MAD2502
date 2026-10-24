@@ -49,3 +49,38 @@ document.querySelectorAll('#applied-data .tutorial-card').forEach((card) => {
   card.querySelector('.button-disabled')?.remove();
   card.appendChild(notebookActions(path));
 });
+
+// The learning rhythm is intentionally repeated across the course. Keeping it
+// visible on the homepage helps students recognize what each notebook expects
+// them to do before they begin clicking through code cells.
+const pathways = document.querySelector('.pathways');
+
+if (pathways) {
+  const learningPattern = document.createElement('section');
+  learningPattern.className = 'content-section light-section';
+  learningPattern.id = 'learning-pattern';
+  learningPattern.setAttribute('aria-labelledby', 'learning-pattern-title');
+
+  learningPattern.innerHTML = `
+    <div class="page-shell">
+      <div class="section-heading centered-heading">
+        <p class="section-kicker">HOW MAD 2502 LESSONS WORK</p>
+        <h2 id="learning-pattern-title">Think first. Run second. Then make it yours.</h2>
+        <p>New lectures and tutorials use the same learning rhythm so you always know what comes next.</p>
+      </div>
+      <div class="pipeline" aria-label="MAD 2502 learning pattern">
+        <span>Understand</span><b>→</b>
+        <span>Predict</span><b>→</b>
+        <span>Run</span><b>→</b>
+        <span>Change</span><b>→</b>
+        <span>Use</span><b>→</b>
+        <span>Practice</span><b>→</b>
+        <span>Connect</span>
+      </div>
+      <p style="max-width:850px;margin:18px auto 0;text-align:center;color:#56616f;line-height:1.7">
+        The goal is not to copy working code. Predict what the code should do, compare that prediction with what actually happens, change one piece, and then use the idea to answer a real question.
+      </p>
+    </div>`;
+
+  pathways.insertAdjacentElement('afterend', learningPattern);
+}
