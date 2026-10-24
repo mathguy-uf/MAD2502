@@ -1,119 +1,174 @@
 # MAD 2502 Capstone Project
 
-The capstone is a computational project, not just a final answer. Your goal is to show the process of turning a question into something you can investigate with Python.
+The capstone is where you begin using Python as a data-science tool on a question your team chooses.
+
+This section is designed to be **standalone and beginner friendly**. It assumes this may be your first semester programming in Python.
+
+You do not need to know advanced machine learning to complete a strong project.
 
 [← Return to the course website](../)
 
+## Start here
+
+If you are unsure what to do next, follow these pages in order:
+
+| Step | Resource | Purpose |
+|---|---|---|
+| **0** | [Capstone Start Here](00_start_here.md) | Understand what the project is and what a reasonable first milestone looks like. |
+| **1** | [Choosing a Question and Scope](01_question_and_scope.md) | Turn a broad idea into something your data can actually answer. |
+| **2** | [Finding and Evaluating Data](02_finding_data.md) | Learn what makes a usable source and how to inspect it. |
+| **3** | [Getting Your First Python Result](03_first_python_result.md) | Load the data, inspect it, compute one result, and explain it. |
+| **4** | [Analysis Menu](04_analysis_menu.md) | Choose a method appropriate for an introductory project. |
+| **5** | [Project Journal Template](05_project_journal.md) | Keep track of work, mistakes, decisions, and next steps. |
+
+## Copyable starter notebook
+
+Use the [Capstone Starter Notebook](capstone_starter.ipynb) if a blank notebook feels too open-ended.
+
+It already contains places for:
+
+- project question;
+- source information;
+- imports;
+- loading data;
+- inspecting rows, columns, types, and missing values;
+- cleaning notes;
+- first result;
+- first graph;
+- interpretation;
+- limitations;
+- next question;
+- project-journal update.
+
+The example data inside it are intentionally tiny so the notebook runs before you replace them with your own data.
+
 ## The project path
 
-1. **Question** — Choose a focused question you actually want to investigate.
-2. **Sources** — Find reliable data and references that are sufficient to begin.
-3. **First result** — Get one meaningful Python result working early.
-4. **Explore** — Clean data, test ideas, make plots, revise the question, and document detours.
-5. **Tell the story** — Build a clear final report and presentation around what you learned.
+```text
+question
+   ↓
+source
+   ↓
+load data in Python
+   ↓
+inspect and clean
+   ↓
+first result
+   ↓
+visualize / compare / model
+   ↓
+interpret
+   ↓
+revise question
+   ↓
+report + presentation
+```
 
-A good project rarely follows a perfectly straight path. Keep track of approaches that did not work and explain important changes in direction.
+Real projects move backward and forward through this path. That is normal.
 
-## What to keep while you work
+## What counts as enough Python?
 
-Maintain a short project journal. Each time your team works, record:
+A project does **not** need to use the most complicated method in the course.
+
+For many projects, the core analysis may be built from:
+
+```python
+head()
+shape
+isna()
+value_counts()
+groupby()
+mean()
+median()
+sort_values()
+```
+
+plus several carefully chosen graphs.
+
+A more advanced model is useful only when it helps answer the question and your team can explain what it is doing.
+
+## The first milestone matters most
+
+Before building an app, training several models, or designing the final presentation, get one complete result working:
+
+1. Python can access the data.
+2. You know what one row represents.
+3. You can identify the important columns.
+4. You can compute one useful summary or comparison.
+5. You can make one appropriate graph when useful.
+6. You can explain the result in plain English.
+
+That proves the project is feasible.
+
+## Keep a project journal
+
+Each work session should leave behind a short record of:
 
 - what you tried;
 - what worked;
 - what failed;
-- what you changed;
-- new sources or datasets you found;
-- questions you still need to answer;
+- what changed;
+- important sources or code you found;
+- one result worth keeping;
+- questions you still have;
 - the next concrete step.
 
-That journal will make the final report much easier to write because it preserves the actual computational process.
-
-## Data and source checklist
-
-Before investing heavily in a dataset, ask:
-
-- Is the source trustworthy?
-- Is the dataset large enough for the question?
-- Does it contain the variables you need?
-- Are important fields missing?
-- Is the data permitted to be downloaded or accessed programmatically?
-- Can Python actually read the format?
-- If an API is required, can every team member obtain access?
-- Can you explain what one row or record represents?
-
-## Get one Python result early
-
-Do not spend weeks planning an elaborate analysis before testing the data.
-
-A useful early milestone might be:
-
-- successfully loading the dataset;
-- retrieving records from an API;
-- producing one cleaned DataFrame;
-- calculating one meaningful summary;
-- fitting one simple model;
-- creating one correctly labeled plot.
-
-The first result does not need to be impressive. It needs to prove that your project can move forward.
-
-## Analysis
-
-Your final analysis should be driven by the project question, not by a desire to use every Python technique you know.
-
-Useful tools may include:
-
-- filtering and grouped summaries with pandas;
-- visualization with Matplotlib;
-- numerical calculations;
-- regression or classification when appropriate;
-- comparison of groups or time periods;
-- simulation;
-- APIs or web data;
-- domain-specific Python libraries.
-
-Explain important assumptions and limitations. A computational result is more useful when the reader understands what it does **not** prove.
+Your final report should reflect the **real computational process**, including important detours and decisions.
 
 ## Final report
 
-As a general scale, plan for approximately **five pages per team member**. A three-person team should therefore expect a report of roughly fifteen pages, although clarity matters more than hitting an exact page count.
+As a general scale, plan for approximately **five pages per team member**. A three-person team should therefore expect roughly fifteen pages, although clarity is more important than hitting an exact page count.
 
-The report should explain the full project process, including:
+The report should explain:
 
-- the question and motivation;
+- question and motivation;
 - background and references;
-- where the data came from;
-- how the data were cleaned or transformed;
-- the computational methods;
+- data source;
+- what one row represents;
+- cleaning and transformations;
+- computational methods;
 - mistakes, detours, or changes that affected the project;
-- important results and visualizations;
+- results and visualizations;
 - limitations;
-- conclusions and possible next steps.
+- conclusion and possible next steps.
 
 ## Presentation
 
-Plan for a **10–12 minute presentation**. The time limit is part of the assignment.
+Plan for a **10–12 minute presentation**.
 
-The audience should see a clear path:
+The research process may be messy. The presentation should make the final path easy to follow:
 
 **question → data → method → important result → conclusion**
 
-Your actual research process may have branched in many directions. The presentation should identify the path that ultimately mattered and communicate it clearly.
+Do not attempt to show every line of code or every dead end.
 
 ## Using AI tools productively
 
-AI tools can be useful for tasks such as:
+AI tools can help with:
 
 - finding possible sources to investigate;
-- explaining an unfamiliar Python error;
-- making code easier to read;
-- asking questions about your operating system or Python environment;
-- generating search terms;
-- helping organize your project journal before drafting the report.
+- explaining an error message;
+- making code more readable;
+- understanding an unfamiliar Python object;
+- generating useful search terms;
+- organizing project-journal notes;
+- identifying questions to ask about your data.
 
-You remain responsible for checking sources, understanding your code, verifying results, and writing a report that accurately represents your team's work.
+You remain responsible for checking sources, understanding your code, verifying results, and accurately representing what your team did.
 
 ## Technical help
 
-Use the **Applied Data** resources and the **Data Rescue Kit** on the course website for common problems involving pandas, APIs, CSV files, file paths, missing values, and web data.
+If Python or data science is still new, begin with:
+
+[Data Science Start Here](../applied_data/00_data_science_start_here.ipynb)
+
+Then use:
+
+- [pandas Basics](../applied_data/02_pandas_basics.ipynb)
+- [eBird API](../applied_data/01_ebird_api.ipynb)
+- [Statistics Villains](../applied_data/03_statistics_villains.ipynb)
+- [Data Rescue Kit](../applied_data/04_data_rescue_kit.ipynb)
+
+The goal is not to memorize commands. The goal is to learn a repeatable process for turning data into evidence.
 
 [← Return to the course website](../)
