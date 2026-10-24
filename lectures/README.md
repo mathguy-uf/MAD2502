@@ -2,30 +2,35 @@
 
 [← Return to the course website](../)
 
-The lecture notebooks are the main path through the Python and computational mathematics portion of the course. They are meant to be **run and changed**, not just read.
+The lecture notebooks are the main path through the Python and computational mathematics portion of the course. They are meant to be **predicted, run, changed, and used**, not just read.
 
-A useful habit for every example is:
+## How every lecture works
 
-1. predict what the code will do;
-2. run it;
-3. explain the output;
-4. change one thing;
-5. run it again.
+Every new lecture follows the same rhythm:
+
+**Understand → Predict → Run → Change → Use → Practice → Connect**
+
+1. **Understand** — introduce one idea and why it matters.
+2. **Predict** — decide what should happen before executing the important example.
+3. **Run** — execute it and compare the output with the prediction.
+4. **Change** — modify one controlled piece and predict again.
+5. **Use** — apply the idea to a more meaningful problem.
+6. **Practice** — work independently without simply copying the example.
+7. **Connect** — identify where the idea appears later in the course or capstone.
+
+The guiding rule is:
+
+> **Think first. Run second. Change something. Then use it.**
+
+See [`TEACHING_PATTERN.md`](../TEACHING_PATTERN.md) for the full course pattern and [`templates/mad2502_notebook_template.ipynb`](../templates/mad2502_notebook_template.ipynb) for the standard notebook structure.
+
+---
 
 ## Course learning map
 
 ### Functions
 
-A function packages a calculation or procedure so it can be reused.
-
-Questions to keep asking:
-
-- What information goes into the function?
-- What value comes back?
-- Which variables are local?
-- What happens when arguments are given in a different order?
-
-Representative examples:
+**Understand:** A function packages a calculation or procedure so it can be reused.
 
 ```python
 def my_max(a, b):
@@ -34,12 +39,18 @@ def my_max(a, b):
     return b
 ```
 
-```python
-def distance(x1, y1, x2, y2):
-    return ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
-```
+**Predict:** What does `my_max(4, 9)` return? What about `my_max(9, 4)`?
 
-The current repository contains an older Functions notebook that is still useful:
+**Change:** Replace `>` with `>=`. Does any returned value change? Does the logic change?
+
+**Use:** Build a function such as distance, average, or a reusable data-cleaning step.
+
+Questions to keep asking:
+
+- What information goes into the function?
+- What value comes back?
+- Which variables are local?
+- What happens when arguments are supplied in a different order?
 
 | View | Colab | Binder |
 |---|---|---|
@@ -49,35 +60,42 @@ The current repository contains an older Functions notebook that is still useful
 
 ### Branching
 
-Programs make decisions with Boolean expressions and `if`, `elif`, and `else`.
+**Understand:** Programs make decisions with Boolean expressions and `if`, `elif`, and `else`.
 
-Start with small questions:
+**Predict:** How many lines print?
 
 ```python
-temperature = 91
+x = 7
 
-if temperature >= 90:
-    print("hot")
-elif temperature >= 70:
-    print("warm")
+if x > 5:
+    print("A")
+
+if x > 3:
+    print("B")
 else:
-    print("cool")
+    print("C")
 ```
 
-Then ask:
+Now compare with:
 
-- Which conditions are tested?
-- In what order?
-- Can more than one branch run?
-- What happens exactly at a boundary value?
+```python
+if x > 5:
+    print("A")
+elif x > 3:
+    print("B")
+else:
+    print("C")
+```
 
-Good examples for this unit include interval membership, grade cutoffs, checking whether a number is even, and validating user input.
+**Change:** Test boundary values such as `x = 5` and `x = 3`.
+
+**Use:** Interval membership, grade cutoffs, validation, parity, and deciding which computational method should run.
 
 ---
 
 ### Iteration
 
-Loops repeat a computation.
+**Understand:** Loops repeat a computation while state changes.
 
 ```python
 total = 0
@@ -88,28 +106,24 @@ for value in [4, 7, 2, 9]:
 print(total)
 ```
 
-The important idea is not just syntax. Trace the state of the variables after every iteration.
+**Predict:** Write the value of `total` after every iteration before running it.
 
-Questions to practice:
+**Change:** Replace the list, change the initial value, or count instead of sum.
 
-- What is the loop variable?
+**Use:** Searching, repeated approximation, simulations, counting, processing data rows, and numerical algorithms.
+
+For every loop ask:
+
 - What changes each time?
 - What stays fixed?
-- When does a `while` loop stop?
-- Could the loop fail to terminate?
-
-Useful applications include sums, searching, repeated approximation, counting, simulation, and processing rows of data.
+- When does it stop?
+- Could it fail to terminate?
 
 ---
 
 ### Recursion
 
-A recursive function solves a problem using a smaller version of the same problem.
-
-Every recursive algorithm needs:
-
-1. a **base case** that stops the process;
-2. a **recursive step** that moves toward the base case.
+**Understand:** A recursive function solves a problem using a smaller version of the same problem. It needs a base case and a recursive step.
 
 ```python
 def factorial(n):
@@ -118,7 +132,7 @@ def factorial(n):
     return n * factorial(n - 1)
 ```
 
-Do not just look at the final answer. Trace the calls:
+**Predict:** Trace `factorial(4)` by hand before running it.
 
 ```text
 factorial(4)
@@ -128,15 +142,17 @@ factorial(4)
 4 * 3 * 2 * 1 * factorial(0)
 ```
 
-The repository also contains a palindrome example that is useful for seeing recursive calls unfold:
+**Change:** Move the base case or remove the `- 1`. Predict the failure before testing it.
 
-[Palindrome notebook](../palindrome.ipynb)
+**Use:** Palindrome testing, recursively defined mathematics, and divide-and-conquer ideas.
+
+[Palindrome example](../palindrome.ipynb)
 
 ---
 
 ### Objects and Classes
 
-A class lets you define a new kind of object with its own data and behavior.
+**Understand:** A class defines a new kind of object with its own data and behavior.
 
 ```python
 class Counter:
@@ -150,17 +166,11 @@ class Counter:
         return f"Counter({self.value})"
 ```
 
-Focus on the relationship between:
+**Predict:** After two calls to `increment()`, what does `print(counter)` display?
 
-- the class;
-- an instance;
-- attributes such as `self.value`;
-- methods;
-- constructors with `__init__`;
-- readable representations with `__str__`;
-- inheritance.
+**Change:** Give the constructor a starting value.
 
-An older integer-set example is available here:
+**Use:** Model objects whose data and operations belong together. Focus on instances, attributes, methods, `__init__`, `__str__`, and inheritance.
 
 [IntSet example](../IntSetExample.ipynb)
 
@@ -168,68 +178,48 @@ An older integer-set example is available here:
 
 ### Computer Arithmetic and IEEE-754
 
-Computers store a finite approximation to many real numbers. That means ordinary algebra and floating-point computation are not always interchangeable.
+**Understand:** Computers store finite representations, so exact real-number algebra and floating-point computation are not always interchangeable.
 
-A useful first experiment is:
+**Predict:** What do you expect from this comparison?
 
 ```python
 print(0.1 + 0.2)
 print((0.1 + 0.2) == 0.3)
 ```
 
-Then investigate:
+**Run:** Compare expectation with actual output.
 
-- binary representation;
-- chopping and rounding;
-- significant digits;
-- absolute and relative error;
-- IEEE-754 binary64 sign, characteristic, and fraction;
-- cancellation and loss of significance;
-- why equivalent formulas can produce different numerical results.
+**Change:** Try other decimal fractions and algebraically equivalent expressions.
 
-The goal is not to fear floating-point arithmetic. The goal is to understand its model and limitations.
+**Use:** Study binary representation, chopping and rounding, absolute/relative error, IEEE-754 binary64, cancellation, and failure of familiar algebraic identities under finite precision.
+
+The point is not to fear floating-point arithmetic. The point is to understand its model and limitations.
 
 ---
 
 ### Working with Files
 
-Programs become much more useful when data can persist outside the running Python session.
+**Understand:** Files let data persist outside one Python session.
 
-The current course covers several formats:
-
-| Format | Best mental model | Typical use |
+| Format | Mental model | Typical use |
 |---|---|---|
 | TXT | plain text | notes, logs, simple data |
 | CSV | table | portable rows and columns |
 | Pickle | Python object | convenient Python-only storage |
-| JSON | lists/dictionaries | APIs and structured text data |
+| JSON | lists/dictionaries | APIs and structured text |
 | HDF5 | hierarchical binary data | large or structured numerical datasets |
 
-Questions to ask about any file format:
+**Predict:** Before loading a file, predict what kind of Python object you expect back.
 
-- Is it human-readable?
-- Is it portable between languages?
-- Does it preserve Python-specific objects?
-- Is it designed for large data?
-- What does the resulting Python object look like after loading?
+**Change:** Save the same information in two formats and compare readability and structure.
+
+**Use:** Connect file formats directly to Applied Data and capstone workflows.
 
 ---
 
 ### Graphics and Visualization
 
-A graph is part of the mathematical argument, not decoration.
-
-Students should be able to create and interpret:
-
-- line plots;
-- scatter plots;
-- bar charts;
-- histograms;
-- multiple curves on one axes;
-- labeled figures;
-- simple interactive or animated figures.
-
-The basic Matplotlib pattern is:
+**Understand:** A graph is part of the computational argument, not decoration.
 
 ```python
 import matplotlib.pyplot as plt
@@ -247,22 +237,28 @@ ax.set(
 plt.show()
 ```
 
-Before making a graph, ask:
+**Predict:** What are the four plotted coordinates? What shape should the curve suggest?
 
-> What question should this figure help the reader answer?
+**Change:** Change markers, line style, axis scale, or one data value and predict the visual effect.
 
-Use labels and units when applicable. Do not rely on color alone to distinguish important information.
+**Use:** Line plots, scatter plots, bar charts, histograms, multiple curves, interactive figures, and animation.
+
+Before making any graph, ask:
+
+> **What question should this figure help the reader answer?**
+
+Use labels and units when applicable, and do not rely on color alone to communicate important distinctions.
 
 ---
 
 ## From lectures to the capstone
 
-The later parts of MAD 2502 deliberately combine earlier ideas:
+The later course deliberately combines earlier ideas:
 
 ```text
 functions
    +
-iteration
+branching / iteration
    +
 files / APIs
    +
@@ -273,6 +269,6 @@ graphics
 capstone project
 ```
 
-When your project becomes complicated, break it back into these smaller pieces. A good project is usually a collection of understandable functions and data transformations, not one giant block of code.
+When a project becomes complicated, break it back into these smaller pieces. A good project is usually a collection of understandable functions and data transformations, not one giant block of code.
 
 [← Return to the course website](../)
