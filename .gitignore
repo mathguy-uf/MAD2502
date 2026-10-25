@@ -123,3 +123,12 @@ dmypy.json
 my_api_info.py
 *_api_info.py
 .env.*
+
+
+# Local credential variants, notebook exports, and course-generated output
+my_info.py
+my_cool_file.py
+.ipynb_checkpoints/
+outputs/
+category_summary.csv
+statistics_villains_clean.csv
