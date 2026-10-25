@@ -1,16 +1,35 @@
 # Finding and Evaluating Data
 
-[← Capstone Start Here](00_start_here.md)
+[← Question and Scope](01_question_and_scope.md) · [Next: First Python Result →](03_first_python_result.md)
 
 A project question is only useful if you can obtain data that actually help answer it.
 
+This step has **two separate jobs**:
+
+1. decide whether the source is reliable enough for your purpose;
+2. decide whether the actual fields/columns can answer your question.
+
+A source can be trustworthy and still be the wrong dataset for your question.
+
+## 1. Find a source you can document
+
+Prefer sources where you can identify:
+
+- the organization, researcher, or author;
+- why the data were collected;
+- documentation or a data dictionary;
+- the time period and population covered;
+- how values were measured or reported;
+- known limitations;
+- access rules or a license when relevant.
+
+Government agencies, universities, scientific organizations, and well-documented public APIs are often easier to evaluate than an unexplained file reposted on a random website. That does **not** mean every official dataset is automatically suitable; read the documentation.
+
 ## Common source types
 
-### 1. CSV or Excel file
+### CSV or Excel file
 
-This is usually the easiest source for a first project.
-
-Typical workflow:
+Usually the easiest source for a first project.
 
 ```python
 import pandas as pd
@@ -19,57 +38,39 @@ data = pd.read_csv("my_file.csv")
 data.head()
 ```
 
-### 2. API
+### API
 
 An API lets Python request structured data from another service.
 
-Typical workflow:
+Typical flow:
 
 ```text
-URL + parameters + optional key
-          ↓
-       request
-          ↓
-        JSON
-          ↓
-      DataFrame
+endpoint + parameters + optional key
+                ↓
+             request
+                ↓
+             response
+                ↓
+               JSON
+                ↓
+            DataFrame
 ```
 
-Use the eBird tutorial in Applied Data for a full beginner example.
+Use the Applied Data eBird notebook for a beginner example.
 
-### 3. Webpage table
+### Webpage table
 
-If a website contains a real HTML table, pandas may be able to read it directly with `pd.read_html()`.
+If a page contains a real HTML table, pandas may be able to read it with `pd.read_html()`.
 
-Use the Statistics Villains tutorial for an example.
+When a CSV or documented API is available, prefer it because structured access is usually more reproducible than scraping a page layout.
 
-### 4. Database or specialized scientific archive
+### Database or scientific archive
 
-These can be excellent sources, but begin by finding documentation and a very small working query before designing a large analysis.
+These can be excellent sources. Start with the documentation and make one small working query before planning a large analysis.
 
-## Evaluate a source before committing to it
+## 2. Inspect the data before committing to it
 
-Ask:
-
-- Who created the data?
-- Why were the data collected?
-- Is there documentation?
-- What does one row or record represent?
-- What time period is covered?
-- What population is included?
-- Are important variables missing?
-- Are there usage limits or access rules?
-- Can your team reproduce the download later?
-
-## Do not confuse “large” with “good”
-
-A dataset with millions of rows is not automatically better.
-
-For this course, a smaller dataset with clear variables and a good question is often much more useful than a giant dataset your team does not understand.
-
-## First inspection checklist
-
-As soon as you can load the data, run something like:
+As soon as you can load a candidate dataset, run:
 
 ```python
 print(data.shape)
@@ -79,67 +80,73 @@ print(data.isna().sum())
 display(data.head())
 ```
 
-Then answer in plain English:
+Then answer:
 
 - What does one row represent?
-- Which columns are numbers?
-- Which columns are categories or text?
-- Which columns contain missing values?
-- Which columns seem directly relevant to our question?
+- Which columns are numeric?
+- Which are categories, text, or dates?
+- Which columns have missing values?
+- Which columns are directly relevant to the question?
+- Are the units documented?
+- Does the time period match the question?
 
-## Save the source information immediately
+## 3. Perform the data-fit check
 
-In your project journal, record:
+Map every important idea in your question to a real field.
 
-- dataset title;
+| Needed idea | Actual column/field | What to verify |
+|---|---|---|
+| Population/unit | ... | What does one row represent? |
+| Main outcome | ... | Numeric/category? Units? Missing values? |
+| Comparison/group | ... | Are labels documented and consistent? |
+| Time | ... | Does coverage match the question? |
+| Other needed variable | ... | Measured directly or only a proxy? |
+
+If a required idea has **no real column/field**, do not invent it from a vague substitute. Revise the question or find another source.
+
+Example: if you want to study posting time but the data contain only the date when a researcher collected the record, those are not the same thing.
+
+## 4. Get one small access test
+
+Before fully committing to the source, prove that Python can access it.
+
+Examples:
+
+- load the CSV and show five rows;
+- make one API request;
+- load one webpage table;
+- query a small date range;
+- read one local data file.
+
+Do this before building the final analysis.
+
+## Save source information immediately
+
+Record in the project journal:
+
+- dataset/source title;
 - organization or author;
 - URL;
 - date accessed;
 - license or usage notes when available;
-- short description of what the dataset contains.
+- what one row represents;
+- important request parameters;
+- known limitations.
 
-Do not rely on remembering this at the end of the semester.
+For a live API, also record things such as region, date range, endpoint, category/species code, and result limits.
 
-## Beginner warning: downloaded data can change
+## Data quality is not the same as data size
 
-If an API or website changes over time, record enough information that someone can understand what you requested.
+A million rows do not make a dataset useful if the variables are unclear.
 
-For an API, save the important parameters such as:
+For this course, a smaller documented dataset that clearly answers a focused question is often much better.
 
-- region;
-- date range;
-- species or category code;
-- number of results requested;
-- endpoint used.
+## Beginner checkpoint
 
-## Practice
+Before moving on, your team should be able to say:
 
-For one candidate source, write a short source evaluation with:
+> We can access the source in Python, explain what one row means, and point to the actual fields needed for our question.
 
-1. where it comes from;
-2. what one row means;
-3. approximate number of rows and columns;
-4. the columns you expect to use;
-5. one limitation you already see;
-6. one Python command or request that proves you can access it.
+If you cannot say that yet, do **not** start modeling. Fix the source/question first.
 
-
-## Does this source actually support the question?
-
-Before committing to a source, map each part of the question to a real column. Record the variable name, units, missingness, time coverage, and what is measured versus merely approximated. If the question asks about posting time but the file contains only a collection date, revise the question or find a better source. A relevant-looking title is not enough.
-
-Keep sensitive records in approved private systems. Use the public course repository only for fictional or appropriately public teaching data.
-
-
-## Try a data-fit check now
-
-For the practice question “How do indoor and outdoor event attendance values compare?”, check the actual columns before choosing a method:
-
-| Needed idea | Column to find | Check | If absent |
-|---|---|---|---|
-| One event | Event identifier or documented row definition | Can the same event appear twice? | Resolve the row meaning first. |
-| Attendance | A numeric attendee count | Is it measured, estimated, or missing? | Revise the outcome or find another source. |
-| Indoor/outdoor group | Location type | Are labels consistent? | Do not infer it from a vague venue name. |
-| Comparable period | Event date | Do both groups cover comparable dates? | Narrow the claim or document the mismatch. |
-
-Make the same table for your question. Use the [data dictionary template](../templates/data_dictionary.md) to keep your findings. A filename or dataset title alone does not show that the needed variables are present.
+Next: [Getting Your First Python Result](03_first_python_result.md)

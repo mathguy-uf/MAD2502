@@ -1,74 +1,104 @@
-# Choosing a Question and Scope
+# Choosing a Manageable Question
 
-[← Capstone Start Here](00_start_here.md)
+[← Capstone Start Here](00_start_here.md) · [Next: Finding Data →](02_finding_data.md)
 
-A good capstone question is **specific enough to investigate with the data you can actually obtain**.
+A good capstone question is **specific enough to investigate with data you can actually obtain**.
 
-## Too broad vs. workable
+For a beginner project, a smaller answerable question is usually better than a huge question that requires many datasets, advanced models, or assumptions you cannot check.
 
-Too broad:
+## Start broad, then narrow
 
-> What makes a video go viral?
+Broad idea:
 
-Better:
-
-> In this YouTube dataset, how are video length, posting time, and selected metadata associated with view count?
+> Sports and performance
 
 Too broad:
 
 > What makes a basketball player clutch?
 
-Better:
+More workable:
 
-> For point guards in this dataset, how do shooting percentage and scoring change during the final five minutes of close games?
+> In this dataset, how does shooting percentage for point guards compare between the first three quarters and the final five minutes of close games?
 
-The better questions are not necessarily more exciting. They are more **answerable**.
+The narrower version tells you what data you would need.
 
-## A useful template
+Another example:
 
-Try writing your question as:
+Too broad:
 
-> Using **[dataset/source]**, we will investigate whether/how **[variables]** are related to **[outcome or comparison]** for **[population/time period]**.
+> What makes a video go viral?
 
-Example:
+More workable:
 
-> Using NBA game data from 2018–2023, we will investigate how well betting-line implied probabilities match actual game outcomes, including whether calibration differs early in the season.
+> In this YouTube dataset, how are video length and posting time associated with view count?
 
-## Scope test
+The word **associated** is intentional. Observational data usually cannot prove what *caused* a video to receive more views.
 
-Your project is probably in reasonable scope if your team can answer yes to most of these:
+## A question template
+
+Try:
+
+> Using **[dataset/source]**, we will investigate **[summary, comparison, trend, or relationship]** involving **[variables]** for **[population/time period]**.
+
+Examples:
+
+> Using five years of public weather observations, we will compare monthly median high temperatures in Gainesville.
+
+> Using a public bird-observation dataset, we will examine how reported observation counts change by month.
+
+> Using a simulation, we will compare the variability of a sample proportion for different sample sizes.
+
+## The scope test
+
+Your question is probably manageable if your team can answer **yes** to most of these:
 
 - Can we obtain the data now?
 - Can Python read it?
-- Can we explain what one row represents?
-- Do we have the variables needed for the question?
-- Can we produce one result within a week?
-- Can we explain the main analysis to classmates?
-- Can the main result fit within the presentation limit posted in Canvas?
+- Can we explain what one row or record represents?
+- Do the needed variables actually exist?
+- Can we get one useful result soon?
+- Can we explain the analysis in plain English?
+- Can the result fit into the presentation requirements in Canvas?
 
-## Warning signs that the project is too large
+## Warning signs
 
-- You need several unrelated datasets before anything works.
-- You plan to build an entire commercial-style app before doing analysis.
-- Your question requires causal conclusions from observational data.
-- Your team is proposing many models but has not loaded the data yet.
-- The project depends on data you cannot actually access.
-- You cannot identify the main outcome or comparison.
+Make the project smaller if:
 
-## Beginner rule
+- you need several unrelated datasets before any result is possible;
+- you are planning an app before you have analyzed the data;
+- the question requires a causal conclusion from observational data;
+- you want many models but have not loaded the source yet;
+- the project depends on data you cannot access;
+- you cannot identify the main quantity, comparison, or relationship;
+- your first useful result seems weeks away.
 
-Prefer a **smaller question answered carefully** over a giant question answered vaguely.
+## Write the first version
 
-You can always add a second question after the first analysis works.
+Before moving on, complete this:
 
-## Practice
+**Our current question:**  
+...
 
-For your current project idea, write:
+**Population/time period:**  
+...
 
-1. your question in one sentence;
-2. the name of the dataset/source;
-3. what one row represents;
-4. the 3–6 columns you expect to use first;
-5. one result you think you can produce soon.
+**Main variables we think we need:**  
+...
 
-Then ask whether each part is actually available in the data.
+**One result we could produce early:**  
+...
+
+**One thing this result would *not* prove:**  
+...
+
+The question may change after you inspect the data. That is normal.
+
+## Beginner checkpoint
+
+Do not choose a method yet. First make sure your team can explain:
+
+1. what you want to learn;
+2. what evidence would help;
+3. what a manageable first result would look like.
+
+Next: [Finding and Evaluating Data](02_finding_data.md)

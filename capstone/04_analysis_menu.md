@@ -1,196 +1,188 @@
 # Analysis Menu for Beginner Projects
 
-[← Capstone Start Here](00_start_here.md)
+[← First Python Result](03_first_python_result.md) · [Next: Project Journal →](05_project_journal.md)
 
-You do **not** need to use every technique on this page. Choose the simplest method that answers your question.
+You do **not** need to use every technique on this page.
 
-## Start with summaries
+Choose the **simplest analysis that answers your question and that your team can explain**.
 
-Before modeling anything, calculate basic summaries.
+Advanced machine learning is not required for a strong project.
 
-Useful examples:
+## Start with descriptive work
+
+Before fitting a model, understand the data.
+
+Useful first commands include:
 
 ```python
-# How many rows?
 len(data)
-```
-
-```python
-# Typical values
 data["value"].mean()
 data["value"].median()
-```
-
-```python
-# Categories
 data["category"].value_counts()
-```
-
-```python
-# Compare groups
 data.groupby("group")["value"].mean()
 ```
 
-A strong project can include several careful descriptive analyses without using advanced machine learning.
+A strong project can be built from careful summaries and visualizations.
 
-## Common question types
+## Match the question to the analysis
 
-### 1. What is typical?
+| If your question asks... | Reasonable beginner analysis |
+|---|---|
+| How many? | counts |
+| What fraction/percent? | percentages with a clear denominator |
+| What is typical? | mean and median |
+| How do groups differ? | grouped summaries and comparisons |
+| Which are largest/smallest? | rankings |
+| What values are common? | distributions, histogram |
+| Are two numeric variables related? | scatter plot; correlation with caveats |
+| How does something change over time? | grouped time summaries and line plot |
+| Can a straight-line relationship summarize the pattern? | simple regression when justified |
+| What happens under a stated probability model? | simulation |
 
-Use:
+## Counts and percentages
 
-- mean;
-- median;
-- minimum and maximum;
-- quartiles;
-- histogram.
+Counts are often the cleanest first result.
 
-### 2. Which categories are most common?
-
-Use:
-
-- `value_counts()`;
-- counts or percentages;
-- bar chart.
-
-### 3. How do two groups compare?
-
-Use:
-
-- group counts;
-- group means or medians;
-- side-by-side summaries;
-- boxplots or bar charts when appropriate.
-
-Be careful not to claim that a difference proves one group **caused** the other result.
-
-### 4. How does something change over time?
-
-Use:
-
-- convert the date column with `pd.to_datetime()`;
-- sort by date;
-- group by day, month, season, or year;
-- line plot.
-
-### 5. Are two numeric variables related?
-
-Use:
-
-- scatter plot;
-- correlation as a summary;
-- simple linear regression if appropriate.
-
-Remember: correlation does not prove causation.
-
-### 6. Can we predict a numeric value?
-
-A simple regression model may be reasonable if:
-
-- the outcome is numeric;
-- you have enough observations;
-- the predictors are meaningful;
-- your team can explain what the model is doing.
-
-Start with a baseline and a small number of predictors.
-
-### 7. Can we predict a category?
-
-A simple classification model may be reasonable if your outcome is categorical.
-
-First count the categories and establish a baseline, such as always predicting the most common training category. A classifier is optional. Use one only if the team can explain how it turns inputs into a category, how it is evaluated, and where it fails.
-
-## Do not choose a model because it sounds advanced
-
-Bad reason:
-
-> We want to use XGBoost because it is powerful.
-
-Better reason:
-
-> Our outcome is categorical, and after establishing a simple baseline we want to compare whether a more flexible model improves prediction.
-
-The method should serve the question.
-
-## Optional extension: train/test language
-
-If you build a predictive model, separate data used to **fit** the model from data used to **evaluate** it.
-
-The basic idea is:
-
-```text
-available data
-     ↓
-train set → fit model
-     ↓
-test set  → evaluate on unseen observations
+```python
+counts = data["category"].value_counts(dropna=False)
+display(counts)
 ```
 
-Do not evaluate a model only on the same data used to fit it.
+For percentages, always state the denominator.
 
-## Simulations can also answer a question
+```python
+if len(data) > 0:
+    percentages = 100 * counts / len(data)
+    display(percentages)
+```
 
-A simulation repeats a simplified model under stated assumptions. For example, compare how the fraction of heads varies across repeated sets of 10 versus 100 fair coin flips. Explain the probability model, number of trials, random seed, and the difference between model behavior and real-world evidence. A larger simulation does not fix unrealistic assumptions.
+Ask whether missing categories should be included in that denominator.
 
-## Optional extension: interpreting model metrics
+## Mean and median
 
-Depending on the problem:
+Use both when large or unusual values may affect the mean.
 
-- regression: MAE, RMSE, or $R^2$;
-- classification: accuracy, precision, recall, confusion matrix;
+```python
+print("mean:", data["value"].mean())
+print("median:", data["value"].median())
+```
 
-MAE is the average absolute prediction error, in the outcome's units. RMSE gives larger errors more weight, in those same units. $R^2$ compares squared error with a constant-mean baseline and can be negative on test data. Accuracy is the fraction of correct category predictions; a confusion matrix shows which categories were confused. Precision asks how often a predicted positive was correct; recall asks how many actual positives were found. On imbalanced data, accuracy alone may be misleading.
+Neither statistic is automatically “better.” Explain why the chosen summary fits the data.
 
-You do not need many metrics. Choose a few that you understand. See [responsible interpretation](07_interpreting_results.md) for baselines, splitting, and leakage.
+## Grouped summaries and comparisons
+
+```python
+summary = (
+    data.groupby("group")["value"]
+    .agg(["count", "mean", "median"])
+)
+
+display(summary)
+```
+
+Always look at group sizes. A difference based on two observations is different evidence from a difference based on two hundred.
+
+## Rankings
+
+```python
+top_10 = data.sort_values("value", ascending=False).head(10)
+display(top_10)
+```
+
+A ranking describes the records in your dataset. It does not automatically establish a universal “best” or “worst.”
+
+## Distributions
+
+A histogram helps show shape, spread, and unusual values.
+
+```python
+ax = data["value"].plot(kind="hist", bins=10)
+ax.set(
+    xlabel="Value",
+    ylabel="Number of observations",
+    title="Distribution of values",
+)
+```
+
+## Scatter plots and correlation
+
+Use a scatter plot before reducing a relationship to one number.
+
+```python
+ax = data.plot(
+    x="x",
+    y="y",
+    kind="scatter",
+)
+```
+
+Correlation summarizes **linear association**. It does not prove that one variable causes the other. A third variable, time trend, sampling process, or unusual observation may explain part of the pattern.
+
+## Time trends
+
+Convert and inspect dates before grouping them.
+
+```python
+data["date"] = pd.to_datetime(data["date"], errors="coerce")
+```
+
+Then decide whether day, month, season, or year is the meaningful scale.
+
+## Simple regression
+
+Simple regression can be appropriate when:
+
+- the response is numeric;
+- a roughly linear relationship makes sense;
+- you have enough observations;
+- you have examined the scatter plot;
+- your team can explain the fitted line and residuals;
+- the model helps answer the question.
+
+Do not fit regression only because it sounds more advanced.
+
+## Simulation
+
+Simulation is a valid capstone direction when the question is about a probability model or process.
+
+Clearly state:
+
+- the assumptions;
+- what is randomized;
+- the number of repetitions;
+- the random seed when used;
+- which conclusions apply to the model rather than the real world.
+
+More simulations do not repair unrealistic assumptions.
 
 ## Visualization checklist
 
 Before keeping a graph, ask:
 
 - What question does this graph answer?
-- Are the axes labeled?
-- Are units shown when needed?
+- Are axes labeled?
+- Are units shown?
 - Is the title informative?
 - Can someone understand the figure without reading the code?
-- Am I relying only on color to communicate categories?
+- Am I using something besides color alone to distinguish important groups?
 
-## A reasonable project progression
+## When should you stop adding methods?
 
-```text
-1. inspect data
-2. clean data
-3. descriptive summaries
-4. visualization
-5. comparison or model if useful
-6. evaluate result
-7. interpret limitations
-```
-
-Skipping directly to step 5 usually makes the project harder, not better.
-
-## When to stop adding methods
-
-Your project probably has enough methods when:
+You probably have enough when:
 
 - the main question has been answered;
-- additional models are not changing the story;
+- another method would not change the story;
 - you can explain every major step;
-- you have enough material to explain the result within the current Canvas requirements.
+- your evidence fits the Canvas report/presentation requirements.
 
 Depth is better than a long list of disconnected techniques.
 
+## Beginner checkpoint
 
-## A percentage needs a denominator
+Write one sentence:
 
-If `data["category"]` stores category labels, this counts each category, including missing labels, and divides by the total row count:
+> We chose **[method]** because our question asks **[what the method answers]**.
 
-```python
-counts = data["category"].value_counts(dropna=False)
-if len(data) > 0:
-    percentages = 100 * counts / len(data)
-    print(percentages)
-else:
-    print("No rows: there is no percentage to report.")
-```
+If you cannot finish that sentence clearly, choose a simpler method.
 
-Explain whether missing categories belong in the denominator for your question. A percentage without its population and row count is easy to misinterpret.
+Next: [Project Journal](05_project_journal.md)

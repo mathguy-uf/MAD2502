@@ -1,30 +1,61 @@
 # MAD 2502 Capstone Project
 
-The capstone is where you begin using Python as a data-science tool on a question your team chooses.
+The capstone is where your team uses Python and data to investigate a question you choose.
 
-This section is designed to be **standalone and beginner friendly**. It assumes this may be your first semester programming in Python.
-
-You do not need to know advanced machine learning to complete a strong project.
+This is a **beginner capstone for a first Python/data-science course**. A strong project does **not** require advanced machine learning. Careful questions, reliable data, simple analysis, clear interpretation, and reproducible work matter more than complicated methods.
 
 [← Return to the course website](../)
 
-## Start here
+## The 12-step beginner pathway
 
-If you are unsure what to do next, follow these pages in order:
+Follow these steps in order. It is normal to move backward when the data teach you something new.
 
-| Step | Resource | Purpose |
-|---|---|---|
-| **0** | [Capstone Start Here](00_start_here.md) | Understand what the project is and what a reasonable first milestone looks like. |
-| **1** | [Choosing a Question and Scope](01_question_and_scope.md) | Turn a broad idea into something your data can actually answer. |
-| **2** | [Finding and Evaluating Data](02_finding_data.md) | Learn what makes a usable source and how to inspect it. |
-| **3** | [Getting Your First Python Result](03_first_python_result.md) | Load the data, inspect it, compute one result, and explain it. |
-| **4** | [Analysis Menu](04_analysis_menu.md) | Choose a method appropriate for an introductory project. |
-| **5** | [Project Journal Template](05_project_journal.md) | Keep track of work, mistakes, decisions, and next steps. |
-| **6** | [The Research Tree](06_research_tree.md) | Preserve detours in the report; choose a clear presentation path. |
-| **7** | [Responsible Interpretation](07_interpreting_results.md) | Match claims to evidence and explain limitations. |
-| **8** | [Final Report](08_final_report.md) | Turn the journal and results into a documented account. |
-| **9** | [Presentation](09_presentation.md) | Explain one coherent path within the time limit. |
-| **10** | [Reproducibility and Accessibility](10_reproducibility_accessibility.md) | Make the work runnable and understandable by others. |
+| Step | What you do | Resource | Before moving on, you should have... |
+|---|---|---|---|
+| **1** | Understand what a capstone is | [Start Here](00_start_here.md) | A one-sentence description of the project goal |
+| **2** | Choose a manageable question | [Question and Scope](01_question_and_scope.md) | One specific question your team can explain |
+| **3** | Find reliable sources/data | [Finding Data](02_finding_data.md) | A documented source you can actually access |
+| **4** | Check whether the data can answer the question | [Finding Data](02_finding_data.md) | The needed ideas mapped to real columns/fields |
+| **5** | Get one small Python result early | [First Python Result](03_first_python_result.md) | Data loaded, inspected, and one useful result |
+| **6** | Choose a reasonable analysis | [Analysis Menu](04_analysis_menu.md) | A method that matches the question |
+| **7** | Keep a project journal | [Project Journal](05_project_journal.md) | A short entry after every work session |
+| **8** | Handle mistakes and failed attempts | [Research Tree](06_research_tree.md) | A record of what failed, what you learned, and what changed |
+| **9** | Interpret without overclaiming | [Responsible Interpretation](07_interpreting_results.md) | A claim whose strength matches the evidence |
+| **10** | Write the final report | [Final Report](08_final_report.md) | A documented account of question → data → process → results → limits |
+| **11** | Give the presentation | [Presentation](09_presentation.md) | One clear story focused on the strongest evidence |
+| **12** | Check reproducibility and accessibility | [Reproducibility & Accessibility](10_reproducibility_accessibility.md) | A fresh run plus a readability/accessibility check |
+
+### The most important rule
+
+**Do not wait until the end to find out whether the project works.**
+
+As early as possible, prove that your team can:
+
+1. access the data;
+2. explain what one row or record represents;
+3. identify the columns/fields needed for the question;
+4. compute one small result;
+5. explain that result in plain English.
+
+If one of these fails, revise the question or source while the project is still small.
+
+## What is enough analysis?
+
+A good beginner project may use only a few well-chosen methods. Appropriate choices include:
+
+- counts and percentages;
+- mean and median;
+- grouped summaries;
+- comparisons;
+- rankings;
+- distributions;
+- scatter plots;
+- time trends;
+- correlation, with appropriate caveats;
+- simple regression when justified;
+- simulation.
+
+Advanced machine learning is **not required**. Do not add a method just because it sounds impressive.
 
 ## Copyable starter notebook
 
@@ -32,137 +63,54 @@ Use the [Capstone Starter Notebook](capstone_starter.ipynb) if a blank notebook 
 
 [View on GitHub](capstone_starter.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/capstone/capstone_starter.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/capstone/capstone_starter.ipynb)
 
-It already contains places for:
+The starter notebook follows the same pathway as this guide. It gives you places to record the question and source, inspect the data, check whether the needed columns exist, compute a first result, make a useful graph, interpret it, record limitations, and update the project journal.
 
-- project question;
-- source information;
-- imports;
-- loading data;
-- inspecting rows, columns, types, and missing values;
-- cleaning notes;
-- first result;
-- first graph;
-- interpretation;
-- limitations;
-- next question;
-- project-journal update.
+The example observations in the notebook are intentionally tiny and fictional so the notebook runs before you replace them with your own data.
 
-The example data inside it are intentionally tiny so the notebook runs before you replace them with your own data.
+## A strong beginner capstone
 
-## The project path
+A strong project is not the one with the most code. It is one where your team can clearly answer:
 
-Choose a question → find data → load and inspect → compute a result → interpret → revise → report and present.
+- What question did we ask?
+- Why is the source credible enough for this question?
+- What does one row/record represent?
+- What did we do to the data?
+- Why did we choose this analysis?
+- What did we find?
+- What can we **not** conclude?
+- Could another person follow our steps?
 
-Real projects branch as well as moving backward and forward. The [research tree](06_research_tree.md) shows how the report records the broader process while the presentation selects one clear path.
+A smaller question answered carefully is better than a huge question answered vaguely.
 
-## What counts as enough Python?
+## When the project changes
 
-The commands below are a vocabulary list; they are methods/attributes used on an existing table, such as `data.head()` and `data.shape`. See the runnable starter for complete examples.
+Real projects change. You may discover:
 
-A project does **not** need to use the most complicated method in the course.
+- the source is unreliable;
+- the needed variable is missing;
+- a column is stored differently than expected;
+- the first graph is uninformative;
+- an analysis is too complicated for the available data;
+- your original question cannot be answered.
 
-For many projects, the core analysis may be built from:
+That is not automatically a failure. Record it in the [Project Journal](05_project_journal.md), explain the decision, and revise. The [Research Tree](06_research_tree.md) shows how useful detours can become part of the final report.
 
-```python
-head()
-shape
-isna()
-value_counts()
-groupby()
-mean()
-median()
-sort_values()
-```
+## What Canvas controls
 
-plus several carefully chosen graphs.
+Canvas remains authoritative for current due dates, report length, presentation time, grading, submission instructions, and course-specific AI-use requirements.
 
-A more advanced model is useful only when it helps answer the question and your team can explain what it is doing.
-
-## The first milestone matters most
-
-Before building an app, training several models, or designing the final presentation, get one complete result working:
-
-1. Python can access the data.
-2. You know what one row represents.
-3. You can identify the important columns.
-4. You can compute one useful summary or comparison.
-5. You can make one appropriate graph when useful.
-6. You can explain the result in plain English.
-
-That proves the project is feasible.
-
-## Keep a project journal
-
-Each work session should leave behind a short record of:
-
-- what you tried;
-- what worked;
-- what failed;
-- what changed;
-- important sources or code you found;
-- one result worth keeping;
-- questions you still have;
-- the next concrete step.
-
-Your final report should reflect the **real computational process**, including important detours and decisions.
-
-Canvas remains authoritative for current lengths, time limits, dates, deadlines, grading, and submission instructions. This site teaches the durable project workflow.
-
-## Final report
-
-Use Canvas for the required report length. Use the journal and research tree to decide what evidence and reasoning the report needs.
-
-The report should explain:
-
-- question and motivation;
-- background and references;
-- data source;
-- what one row represents;
-- cleaning and transformations;
-- computational methods;
-- mistakes, detours, or changes that affected the project;
-- results and visualizations;
-- limitations;
-- conclusion and possible next steps.
-
-## Presentation
-
-Use the presentation time limit posted in Canvas.
-
-The research process may be messy. The presentation should make the final path easy to follow:
-
-**question → data → method → important result → conclusion**
-
-Do not attempt to show every line of code or every dead end.
-
-## Using AI tools productively
-
-AI tools can help with:
-
-- finding possible sources to investigate;
-- explaining an error message;
-- making code more readable;
-- understanding an unfamiliar Python object;
-- generating useful search terms;
-- organizing project-journal notes;
-- identifying questions to ask about your data.
-
-You remain responsible for checking sources, understanding your code, verifying results, and accurately representing what your team did.
+This GitHub section teaches the durable workflow.
 
 ## Technical help
 
-If Python or data science is still new, begin with:
+If Python or data science is still new, use the Applied Data materials:
 
-[Data Science Start Here](../applied_data/00_data_science_start_here.ipynb)
-
-Then use:
-
-- [pandas Basics](../applied_data/02_pandas_basics.ipynb)
+- [Data Science Start Here](../applied_data/00_data_science_start_here.ipynb)
 - [eBird API](../applied_data/01_ebird_api.ipynb)
+- [pandas Basics](../applied_data/02_pandas_basics.ipynb)
 - [Statistics Villains](../applied_data/03_statistics_villains.ipynb)
 - [Data Rescue Kit](../applied_data/04_data_rescue_kit.ipynb)
 
 The goal is not to memorize commands. The goal is to learn a repeatable process for turning data into evidence.
 
 [← Return to the course website](../)
-

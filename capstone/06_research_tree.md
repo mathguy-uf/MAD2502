@@ -1,34 +1,96 @@
-# The research tree: report broadly, present one path
+# The Research Tree: Mistakes, Detours, and Decisions
 
-[Capstone home](README.md)
+[← Project Journal](05_project_journal.md) · [Next: Interpretation →](07_interpreting_results.md)
 
-Real projects branch. A discarded dataset, missing variable, or failed method can explain why your eventual analysis is reasonable. A good project does not require the first idea to work.
+Real projects do not move in a perfectly straight line.
 
-The example below is fictional. The **thick green route** is the presentation's chosen path; the side branches belong in the report when they changed a decision.
+You may try a source that fails, discover a missing variable, make a graph that exposes a problem, or abandon a method that is too complicated. Those events are useful when they help you make a better decision.
+
+## A failed attempt is not automatically a failed project
+
+Use this pattern:
+
+**What we tried → What happened → What we learned → What we changed**
+
+Example:
+
+> We planned to compare attendance using Source A. After loading it, we discovered that it did not contain attendance. We therefore switched to Source B and recorded the change in population and time period.
+
+That is a legitimate part of the research process.
+
+## Think of the project as a tree
 
 ```mermaid
 flowchart TD
-    Q["Question: which events attract attendance?"] --> A["Try source A"]
-    A --> M["Missing attendance: revise source"]
-    Q ==> B["Choose source B"]
-    B ==> C["Inspect rows and missing values"]
-    C --> X["Try a complex model"]
-    X --> F["Too little data: abandon model"]
-    C ==> S["Compare groups and plot distributions"]
-    S ==> R["Explain result and limitations"]
-    linkStyle 2,3,6,7 stroke:#176640,stroke-width:4px
+    Q["Question"] --> A["Try source A"]
+    A --> M["Needed variable missing"]
+    M --> B["Try source B"]
+    B --> C["Inspect rows and missing values"]
+    C --> X["Try complicated method"]
+    X --> F["Too little data / hard to justify"]
+    C --> S["Use grouped summaries + distribution plot"]
+    S --> R["Interpret result + limitations"]
 ```
 
-Text description: start with a question. Source A fails because attendance is absent. Source B contains it. After inspection, an attempted complex model proves unsuitable; the team uses a group comparison. The presentation follows **question → source B → inspection → group comparison → result and limitations**. The report also explains why source A and the model were abandoned.
+Text description: the team begins with a question. The first source fails because an important variable is missing. The second source works. After inspection, the team considers a complicated method but decides the data do not justify it. They use grouped summaries and a distribution plot instead, then interpret the result and its limitations.
 
-## What belongs in the report?
+## What goes in the final report?
 
-Include the broader research tree: important sources considered, approaches tried, errors that exposed a conceptual problem, changes to cleaning, and the reasoning behind the final choice. For each meaningful detour, write **what we tried → what happened → what we learned → what changed**. Support the account with your journal and code.
+Include detours that changed an important decision, such as:
 
-## What belongs in the presentation?
+- changing the data source;
+- revising the question;
+- changing how missing values are handled;
+- rejecting an inappropriate method;
+- discovering a limitation;
+- correcting a conceptual mistake.
 
-Choose one understandable route through that tree. Introduce the question, explain the data and essential method, show the strongest relevant evidence, and end with the conclusion and limitations. You may briefly mention a detour if it explains a key choice. A coherent presentation does not require pretending there were no mistakes.
+Explain the reason for the change.
 
-## Try it now
+## What goes in the presentation?
 
-List five things your team has tried. Draw arrows showing which led to new questions or decisions. Circle the result that best answers your current question. Trace the shortest honest route a classmate needs to understand that result.
+The presentation should usually follow **one clear path**:
+
+**question → data → method → strongest evidence → conclusion → limitation**
+
+You can mention a detour briefly if it explains why the final choice makes sense.
+
+You do not need to present every error message.
+
+## When code fails
+
+Treat the error as information.
+
+Ask:
+
+1. What line failed?
+2. What type of object did Python actually receive?
+3. What did I expect?
+4. Is the problem code, data, file location, missing values, or an assumption?
+5. What is the smallest test that would distinguish those possibilities?
+
+Record a meaningful discovery in the journal.
+
+## When the analysis fails
+
+Sometimes the code runs but the analysis is still wrong for the question.
+
+Examples:
+
+- correlation used on a relationship that is clearly nonlinear;
+- means compared when one group has a severe outlier and tiny sample;
+- regression used without looking at the scatter plot;
+- a time trend built from dates that do not represent the event time;
+- missing values silently changing the denominator.
+
+A program that runs is not automatically a valid analysis.
+
+## Beginner checkpoint
+
+Draw your current project tree using boxes or bullet points. Circle the branch you are using now.
+
+Then write:
+
+> We changed **[source/question/method]** because **[evidence from the data or computation]**.
+
+Next: [Interpret Results Responsibly](07_interpreting_results.md)

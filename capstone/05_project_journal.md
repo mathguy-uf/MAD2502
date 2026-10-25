@@ -1,17 +1,19 @@
-# Keep a project journal
+# Keep a Project Journal
 
-[Capstone home](README.md)
+[← Analysis Menu](04_analysis_menu.md) · [Next: Research Tree →](06_research_tree.md)
 
-Write a short entry **each time you work**, even when the code fails. A journal preserves sources, reasoning, and decisions while they are fresh. Later it becomes evidence for the final report: you can explain why the project changed instead of reconstructing a story from memory.
+Write a short journal entry **every time your team works**, including sessions where the code fails.
 
-[Copy the reusable journal template](../templates/project_journal.md).
+The journal is not busywork. It prevents you from having to reconstruct the project from memory when you write the final report.
+
+## Copy this template for every work session
 
 ```text
 Date:
 
 Who worked today:
 
-Goal for this session:
+Goal:
 
 What we tried:
 
@@ -23,21 +25,92 @@ Error or unexpected result:
 
 What we learned:
 
-Decision made:
+Decision:
 
 Next step:
 ```
 
-## A fictional example
+Keep the labels exactly this simple. Short entries are fine.
 
-- **Goal:** compare the mean attendance of indoor and outdoor events.
-- **What we tried:** loaded the teaching CSV and grouped by location type.
-- **What happened:** one group had several missing attendance values.
-- **Error or unexpected result:** the total number of rows differed from the number used in the mean.
-- **What we learned:** `size()` counts rows, while `count()` counts known measurements.
-- **Decision:** show both numbers and describe the missing values; do not replace them with zero.
-- **Next step:** compare the medians and inspect whether one large event drives the difference.
+## Fictional example
 
-Record the code filename/cell, source URL, access date, and any parameters needed to reproduce the result. A useful failed approach belongs in the [research tree](06_research_tree.md). You do not need to record every typo in the report.
+```text
+Date:
+October 12
 
-At the end of a session, every teammate should be able to name the next small Python action. “Do more research” is too vague; “load 20 rows and check whether the date column exists” is actionable.
+Who worked today:
+Team members A and B
+
+Goal:
+Compare indoor and outdoor event attendance.
+
+What we tried:
+Loaded the CSV and grouped attendance by location type.
+
+Code/data/source used:
+analysis.ipynb, attendance.csv, groupby() with mean()
+
+What happened:
+The outdoor mean was larger.
+
+Error or unexpected result:
+Some attendance values were missing, so the number of rows was larger than the number used in the mean.
+
+What we learned:
+size() counts rows, while count() counts non-missing values.
+
+Decision:
+Show both group size and known attendance count. Do not replace missing attendance with zero.
+
+Next step:
+Compare medians and inspect the distribution for unusually large events.
+```
+
+## What counts as a useful failed attempt?
+
+Record a failed attempt when it changes what you understand or what you decide.
+
+Examples:
+
+- the source does not contain the variable you need;
+- an API returns no records for the requested parameters;
+- dates are stored in an unexpected format;
+- a graph reveals one extreme value;
+- a model is inappropriate for the amount or type of data;
+- a cleaning step accidentally removes too many rows;
+- your first question cannot be answered with the available evidence.
+
+You do **not** need to narrate every typo.
+
+## Record reproducibility details while they are fresh
+
+When relevant, include:
+
+- source URL;
+- date accessed;
+- filename;
+- notebook cell/section;
+- API endpoint and parameters;
+- cleaning decision;
+- random seed;
+- package or function that mattered.
+
+## End every session with one concrete next step
+
+Weak:
+
+> Do more research.
+
+Better:
+
+> Load 20 rows from the second source and check whether it contains the event date and attendance columns.
+
+The next step should be small enough that another teammate knows what to do.
+
+## Beginner checkpoint
+
+Before ending a work session, make sure the journal explains:
+
+**what we tried → what happened → what we learned → what we decided → what comes next**
+
+Next: [Handling Mistakes with the Research Tree](06_research_tree.md)
