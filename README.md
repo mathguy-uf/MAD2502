@@ -4,10 +4,10 @@ This repository contains student-facing course resources for **MAD 2502: Computa
 
 The repository is organized around the way the course is used:
 
-- **Lectures** — Python and computational mathematics notebooks.
-- **Applied Data** — APIs, pandas, web data, and practical data workflows.
-- **Capstone** — project planning, research process, analysis, report, and presentation guidance.
-- **Examples** — additional computational demonstrations and simulations.
+- **[Lectures](lectures/README.md)** — reviewed Python and computational mathematics notebooks.
+- **[Applied Data](applied_data/README.md)** — APIs, pandas, web data, and practical data workflows.
+- **[Capstone](capstone/README.md)** — project planning, research process, analysis, report, and presentation guidance.
+- **[Examples](examples/)** — additional computational demonstrations and simulations.
 
 ## Course website
 
@@ -33,10 +33,10 @@ See **[START_HERE.md](START_HERE.md)** for:
 
 ## Three ways to use notebooks
 
-Current notebooks use the same three options as MAD 4401:
+Student-facing notebooks use the same three options as MAD 4401:
 
-1. **View on GitHub** — read the notebook and saved output.
-2. **Run in Colab** — execute a notebook in Google Colab.
+1. **View on GitHub** — read the notebook structure and code.
+2. **Run in Colab** — execute and change a notebook in Google Colab.
 3. **Launch Binder** — open the repository in a temporary JupyterLab environment.
 
 For repeated local use, clone the repository once:
