@@ -54,7 +54,7 @@ Questions to keep asking:
 
 | View | Colab | Binder |
 |---|---|---|
-| [GitHub](../Lecture03.ipynb) | [Run in Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/Lecture03.ipynb) | [Launch Binder](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/Lecture03.ipynb) |
+| [GitHub](03_functions.ipynb) | [Run in Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/lectures/03_functions.ipynb) | [Launch Binder](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/lectures/03_functions.ipynb) |
 
 ---
 
@@ -272,4 +272,3 @@ capstone project
 When a project becomes complicated, break it back into these smaller pieces. A good project is usually a collection of understandable functions and data transformations, not one giant block of code.
 
 [← Return to the course website](../)
-
