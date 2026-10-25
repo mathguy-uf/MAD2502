@@ -72,10 +72,7 @@ Neither statistic is automatically “better.” Explain why the chosen summary 
 ## Grouped summaries and comparisons
 
 ```python
-summary = (
-    data.groupby("group")["value"]
-    .agg(["count", "mean", "median"])
-)
+summary = data.groupby("group")["value"].agg(["count", "mean", "median"])
 
 display(summary)
 ```
