@@ -21,8 +21,8 @@ Follow these steps in order. It is normal to move backward when the data teach y
 | **7** | Keep a project journal | [Project Journal](05_project_journal.md) | A short entry after every work session |
 | **8** | Handle mistakes and failed attempts | [Research Tree](06_research_tree.md) | A record of what failed, what you learned, and what changed |
 | **9** | Interpret without overclaiming | [Responsible Interpretation](07_interpreting_results.md) | A claim whose strength matches the evidence |
-| **10** | Write the final report | [Final Report](08_final_report.md) | A documented account of question → data → process → results → limits |
-| **11** | Give the presentation | [Presentation](09_presentation.md) | One clear story focused on the strongest evidence |
+| **10** | Write the final report | [Final Report](08_final_report.md) | A documented account of the larger research process and final evidence |
+| **11** | Give the presentation | [Presentation](09_presentation.md) | One clean path through the project focused on the strongest evidence |
 | **12** | Check reproducibility and accessibility | [Reproducibility & Accessibility](10_reproducibility_accessibility.md) | A fresh run plus a readability/accessibility check |
 
 ### The most important rule
@@ -56,6 +56,33 @@ A good beginner project may use only a few well-chosen methods. Appropriate choi
 - simulation.
 
 Advanced machine learning is **not required**. Do not add a method just because it sounds impressive.
+
+## The research tree
+
+Real projects branch. Your team may investigate a source, try a dataset, discover a missing variable, change the question, try a method, get an error, clean the data differently, abandon an approach, and eventually find a useful result.
+
+That branching process is part of the project, not something to hide.
+
+The two final products use the tree differently:
+
+- **Final report:** records the larger [research tree](06_research_tree.md), including meaningful mistakes, failed approaches, evidence that changed a decision, and what the team learned.
+- **Presentation:** follows one clean path through the tree so the audience can understand the **question → method → evidence → conclusion** without hearing every detour.
+
+A failed experiment or analysis can still support a strong project when the team clearly describes what failed, investigates why, provides evidence, explains what was learned, and avoids conclusions the evidence does not support.
+
+## Current final-project expectations
+
+Unless Canvas gives a different current instruction, plan for:
+
+- **one coherent group report**, roughly **5 pages per student**;
+- a **10–12 minute group presentation**;
+- clear, readable figures with informative labels/captions;
+- cited data sources and background sources;
+- reproducible instructions for obtaining the data and running the code;
+- **no API keys, passwords, or other secrets in the submission**;
+- accessible figures and presentation materials, including readable text, usable contrast, meaningful labels, and communication that does not rely on color alone.
+
+“One coherent group report” means the document should read as one project, not as separate mini-reports pasted together by different teammates.
 
 ## Copyable starter notebook
 
@@ -97,9 +124,7 @@ That is not automatically a failure. Record it in the [Project Journal](05_proje
 
 ## What Canvas controls
 
-Canvas remains authoritative for current due dates, report length, presentation time, grading, submission instructions, and course-specific AI-use requirements.
-
-This GitHub section teaches the durable workflow.
+The expectations above describe the current capstone structure. Canvas remains authoritative if it gives a different due date, page requirement, presentation time, grading rule, submission instruction, or course-specific AI-use requirement.
 
 ## Technical help
 

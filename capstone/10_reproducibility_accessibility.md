@@ -1,25 +1,103 @@
-# Make the project reproducible and accessible
+# Make the Project Reproducible and Accessible
 
-[Capstone home](README.md)
+[← Presentation](09_presentation.md) · [Capstone home](README.md)
 
-**Reproducible** means another person can follow your documented steps and obtain the result from the same inputs. Begin with a fresh session; a notebook that works only because of forgotten variables is unfinished.
+**Reproducible** means another person can follow your documented steps and obtain the main result from the same inputs.
 
-## Before handing your project to someone else
+A notebook that works only because of forgotten variables, hidden files, or an API key stored in the code is unfinished.
 
-- Record source URLs, access dates, licenses, row meaning, units, and request parameters. Preserve a permitted data snapshot or document how to obtain restricted data.
-- Use relative paths and a short README with run order. List the packages and versions you actually used. Explain optional steps and expected errors.
-- Keep raw inputs unchanged; write cleaned data and figures into a separate `outputs/` folder.
-- Set and record random seeds for simulations. Explain that a seed repeats a computation; it does not prove the model is realistic.
-- Restart the kernel and run all normal cells in order. Remove stale outputs and anything private before sharing. An API may change, so distinguish a live run from a saved sample.
-- Keep API keys in ignored local files or an appropriate secret store. An ignored file is still plain text. Do not publish keys, passwords, student work, names/grades, or restricted data.
-- Ask a teammate to follow the README from a fresh copy. Record what failed and repair the instructions.
+## Reproducibility checklist
 
-## Make results understandable without relying on vision alone
+Before submitting the project:
 
-Use a descriptive notebook title and ordered headings. Introduce each table and explain what each row/column means. Label axes and units. Use markers, line styles, or direct labels in addition to color. Write a short textual finding beside each important graph and supply image alt text where the publishing format supports it. Check exported reports and slides for reading order, readable fonts, table headers, and usable contrast.
+- Record source URLs, access dates, licenses, row meaning, units, and important request parameters.
+- Explain how another person can obtain the data. If redistribution is allowed, include an appropriate snapshot; otherwise provide clear download/request instructions.
+- Use relative paths when possible so the project does not depend on one student's computer.
+- Provide a short README or equivalent run guide that states the file order and what each important file does.
+- List the packages needed to run the project. Record versions when they materially affect reproducibility.
+- Keep raw inputs unchanged when practical; save cleaned data and generated figures separately.
+- Set and record random seeds for simulations or randomized methods when reproducibility requires them.
+- Restart the kernel and run all normal notebook cells in order from a fresh session.
+- Distinguish results produced from a live API/website from results produced from a saved data snapshot.
+- Ask a teammate to follow the instructions from a fresh copy and fix anything that depends on unstated knowledge.
 
-These checks improve usability; they are not a formal accessibility certification.
+## Never submit API keys or secrets
 
-## A small final check
+**Do not include API keys, passwords, tokens, or other secrets in any submitted notebook, script, report, screenshot, data file, or repository.**
 
-Have a teammate explain one figure using only its caption and nearby text. Then have them reproduce it using the documented instructions. Fix either explanation if it depends on information that exists only in your memory.
+If your project needs a key, document the setup instead. For example:
+
+> Create a local file named `my_api_info.py`, place your own API key there using the variable name described below, and do not commit that file.
+
+An ignored file is still plain text on your computer, so protect it appropriately.
+
+Before submission, search the project for your actual key or token and inspect notebook outputs as well as code cells. A secret can accidentally appear in printed output even when the code itself is clean.
+
+If a key was accidentally published, removing it from the latest file is not enough protection; revoke/rotate the exposed credential according to the provider's instructions.
+
+## Reproducible data instructions
+
+A reader should not have to guess how the data appeared on your computer.
+
+Document:
+
+- dataset/API/webpage name;
+- source URL or endpoint;
+- access date;
+- important query parameters;
+- expected filename or folder;
+- any cleaning step required before analysis;
+- whether the source may change over time;
+- what a reader should do if the live source is unavailable.
+
+If your project uses restricted data, do not publish it merely for reproducibility. Explain the legitimate access procedure instead.
+
+## Make figures understandable and accessible
+
+For every important figure in the report or presentation:
+
+- use a descriptive title or caption;
+- label axes and units;
+- make text large enough to read;
+- use sufficient contrast;
+- avoid relying only on color to distinguish groups;
+- use markers, line styles, direct labels, or patterns when helpful;
+- explain the main finding in nearby text or aloud during the presentation;
+- provide text alternatives for essential visuals where the publishing format supports them.
+
+A reader should not need to inspect your code to understand what a figure shows.
+
+## Make reports and slides accessible
+
+Use meaningful headings and a logical reading order. Tables should have clear header rows. Links should use descriptive text rather than vague labels such as “click here.” Avoid tiny screenshots of code or tables.
+
+Check exported files, not only the editable originals. Confirm that:
+
+- fonts remain readable;
+- mathematical notation renders correctly;
+- figures are not blurry;
+- captions remain near their figures;
+- contrast remains usable;
+- slide content is not clipped;
+- essential information is not conveyed by color alone.
+
+These practices improve accessibility and usability; they are not a formal accessibility certification.
+
+## Final handoff test
+
+Give a teammate the project instructions and ask them to act like a new user.
+
+They should be able to answer:
+
+1. Where do I get the data?
+2. Where would I place my own API key, if one is required?
+3. Which file do I run first?
+4. Which packages do I need?
+5. What output should I expect?
+6. Which result or figure answers the main question?
+
+Then have them restart the environment and reproduce one important result using only the written instructions.
+
+If they need information that exists only in your memory, add it to the documentation before submitting.
+
+[← Capstone home](README.md)
