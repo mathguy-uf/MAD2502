@@ -15,6 +15,51 @@ if (menuButton && siteNav) {
   });
 }
 
+// The short list under the hero buttons describes course topics. These are
+// intentionally NOT navigation controls, so render them as plain text rather
+// than button-like pills.
+const heroTags = document.querySelector('.hero-tags');
+
+if (heroTags) {
+  const topics = Array.from(heroTags.querySelectorAll('span')).map((item) => item.textContent.trim());
+  heroTags.innerHTML = '';
+  heroTags.setAttribute('aria-label', 'Course topics');
+  heroTags.style.alignItems = 'center';
+  heroTags.style.columnGap = '8px';
+  heroTags.style.rowGap = '4px';
+
+  const label = document.createElement('strong');
+  label.textContent = 'Course topics:';
+  label.style.color = '#5e687b';
+  label.style.fontSize = '.78rem';
+  label.style.fontWeight = '850';
+  heroTags.appendChild(label);
+
+  topics.forEach((topic, index) => {
+    if (index > 0) {
+      const separator = document.createElement('span');
+      separator.textContent = '•';
+      separator.setAttribute('aria-hidden', 'true');
+      separator.style.padding = '0';
+      separator.style.border = '0';
+      separator.style.background = 'transparent';
+      separator.style.color = '#9aa4b5';
+      heroTags.appendChild(separator);
+    }
+
+    const item = document.createElement('span');
+    item.textContent = topic;
+    item.style.padding = '0';
+    item.style.border = '0';
+    item.style.borderRadius = '0';
+    item.style.background = 'transparent';
+    item.style.color = '#42506a';
+    item.style.fontSize = '.78rem';
+    item.style.fontWeight = '700';
+    heroTags.appendChild(item);
+  });
+}
+
 // Keep notebook access consistent with MAD 4401: students can read the
 // notebook on GitHub, run one notebook in Colab, or launch the repository
 // in Binder/JupyterLab.
