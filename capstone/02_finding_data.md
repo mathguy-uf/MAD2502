@@ -122,3 +122,10 @@ For one candidate source, write a short source evaluation with:
 4. the columns you expect to use;
 5. one limitation you already see;
 6. one Python command or request that proves you can access it.
+
+
+## Does this source actually support the question?
+
+Before committing to a source, map each part of the question to a real column. Record the variable name, units, missingness, time coverage, and what is measured versus merely approximated. If the question asks about posting time but the file contains only a collection date, revise the question or find a better source. A relevant-looking title is not enough.
+
+Keep sensitive records in approved private systems. Use the public course repository only for fictional or appropriately public teaching data.

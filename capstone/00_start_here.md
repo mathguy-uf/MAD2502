@@ -104,3 +104,6 @@ A five-minute journal entry can save hours when writing the final report.
 5. [Project journal template](05_project_journal.md)
 
 If Python or pandas is still new, start with the [Data Science Start Here notebook](../applied_data/00_data_science_start_here.ipynb).
+
+
+After your first result: [research tree](06_research_tree.md) → [interpretation](07_interpreting_results.md) → [report](08_final_report.md) → [presentation](09_presentation.md) → [reproducibility](10_reproducibility_accessibility.md).

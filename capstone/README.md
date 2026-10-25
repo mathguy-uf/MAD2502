@@ -20,10 +20,17 @@ If you are unsure what to do next, follow these pages in order:
 | **3** | [Getting Your First Python Result](03_first_python_result.md) | Load the data, inspect it, compute one result, and explain it. |
 | **4** | [Analysis Menu](04_analysis_menu.md) | Choose a method appropriate for an introductory project. |
 | **5** | [Project Journal Template](05_project_journal.md) | Keep track of work, mistakes, decisions, and next steps. |
+| **6** | [The Research Tree](06_research_tree.md) | Preserve detours in the report; choose a clear presentation path. |
+| **7** | [Responsible Interpretation](07_interpreting_results.md) | Match claims to evidence and explain limitations. |
+| **8** | [Final Report](08_final_report.md) | Turn the journal and results into a documented account. |
+| **9** | [Presentation](09_presentation.md) | Explain one coherent path within the time limit. |
+| **10** | [Reproducibility and Accessibility](10_reproducibility_accessibility.md) | Make the work runnable and understandable by others. |
 
 ## Copyable starter notebook
 
 Use the [Capstone Starter Notebook](capstone_starter.ipynb) if a blank notebook feels too open-ended.
+
+[View on GitHub](capstone_starter.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/capstone/capstone_starter.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/capstone/capstone_starter.ipynb)
 
 It already contains places for:
 
@@ -64,7 +71,7 @@ revise question
 report + presentation
 ```
 
-Real projects move backward and forward through this path. That is normal.
+Real projects branch as well as moving backward and forward. The [research tree](06_research_tree.md) shows how the report records the broader process while the presentation selects one clear path.
 
 ## What counts as enough Python?
 
@@ -114,6 +121,8 @@ Each work session should leave behind a short record of:
 - the next concrete step.
 
 Your final report should reflect the **real computational process**, including important detours and decisions.
+
+Canvas remains authoritative for current lengths, time limits, dates, deadlines, grading, and submission instructions. This site teaches the durable project workflow.
 
 ## Final report
 
@@ -172,3 +181,4 @@ Then use:
 The goal is not to memorize commands. The goal is to learn a repeatable process for turning data into evidence.
 
 [← Return to the course website](../)
+

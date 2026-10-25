@@ -1,103 +1,43 @@
-# Project Journal Template
+# Keep a project journal
 
-[← Capstone Start Here](00_start_here.md)
+[Capstone home](README.md)
 
-Keep this journal while your team works. The goal is not formal writing. The goal is to preserve the actual project process so you do not have to reconstruct it at the end.
+Write a short entry **each time you work**, even when the code fails. A journal preserves sources, reasoning, and decisions while they are fresh. Later it becomes evidence for the final report: you can explain why the project changed instead of reconstructing a story from memory.
 
-You can keep one Markdown file, shared document, or notebook section for the whole team.
-
-## Entry template
-
-Copy this block each time your team works:
+[Copy the reusable journal template](../templates/project_journal.md).
 
 ```text
 Date:
+
 Who worked today:
 
-Goal for today:
+Goal for this session:
 
 What we tried:
 
-What worked:
+Code/data/source used:
 
-What failed or confused us:
+What happened:
 
-What we changed:
+Error or unexpected result:
 
-New source/data/code discovered:
+What we learned:
 
-One result worth keeping:
+Decision made:
 
-Questions we still have:
-
-Next concrete step:
+Next step:
 ```
 
-## Example beginner entry
+## A fictional example
 
-```text
-Date: October 24
-Who worked today: Alex, Sam, Jordan
+- **Goal:** compare the mean attendance of indoor and outdoor events.
+- **What we tried:** loaded the teaching CSV and grouped by location type.
+- **What happened:** one group had several missing attendance values.
+- **Error or unexpected result:** the total number of rows differed from the number used in the mean.
+- **What we learned:** `size()` counts rows, while `count()` counts known measurements.
+- **Decision:** show both numbers and describe the missing values; do not replace them with zero.
+- **Next step:** compare the medians and inspect whether one large event drives the difference.
 
-Goal for today:
-Load the CSV and see whether it contains the columns we expected.
+Record the code filename/cell, source URL, access date, and any parameters needed to reproduce the result. A useful failed approach belongs in the [research tree](06_research_tree.md). You do not need to record every typo in the report.
 
-What we tried:
-Used pandas.read_csv() and displayed the first five rows.
-
-What worked:
-The file loaded. We have 12,842 rows and 14 columns.
-
-What failed or confused us:
-The column called "rating" came in as text instead of numbers.
-
-What we changed:
-Removed percent signs and used pd.to_numeric(..., errors="coerce").
-
-New source/data/code discovered:
-The dataset documentation says missing ratings are stored as "N/A".
-
-One result worth keeping:
-Median rating is 7.4 after cleaning.
-
-Questions we still have:
-Should rows with missing ratings be removed for every analysis?
-
-Next concrete step:
-Compare ratings across the three main categories and make one graph.
-```
-
-## Why failed attempts belong in the journal
-
-A failed approach can explain:
-
-- why you changed datasets;
-- why you changed the research question;
-- why one model was abandoned;
-- why you changed how a variable was cleaned;
-- why an API or website was not usable.
-
-That history belongs in the final report when it materially affected the project.
-
-## Record code decisions too
-
-You do not need to paste every line of code, but record important choices such as:
-
-- why a filter was used;
-- why missing values were dropped or filled;
-- why a date range changed;
-- why a variable was transformed;
-- why a model or metric was selected.
-
-## Weekly project check
-
-At least once per week, your team should be able to answer:
-
-1. What is our current question?
-2. What data are we using?
-3. What does one row represent?
-4. What is our best result so far?
-5. What is the biggest unresolved problem?
-6. What is the next thing we will do in Python?
-
-If you cannot answer #6, the project may be stuck at the planning stage.
+At the end of a session, every teammate should be able to name the next small Python action. “Do more research” is too vague; “load 20 rows and check whether the date column exists” is actionable.

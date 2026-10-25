@@ -6,6 +6,21 @@ Your first Python result should be **small, interpretable, and reproducible**.
 
 Do not begin with your final model. Begin by proving that Python can read your data and answer one meaningful question.
 
+## A complete first run, even before your real file arrives
+
+These are **invented** observations. Run this cell and predict which group has the larger mean. Then change one value, predict the effect, and run it again.
+
+```python
+import pandas as pd
+
+data = pd.DataFrame({"group": ["A", "A", "B"], "value": [2, 4, 9]})
+display(data.head())
+print(data.shape)
+print(data.groupby("group")["value"].mean())
+```
+
+One row is one invented observation. This proves the workflow works; it is not a result about your actual project. Replace the data source before making a project claim. `head()` alone can be a useful first milestone if it proves you accessed and understood real data.
+
 ## Step 1: load the data
 
 For a CSV file:
@@ -112,3 +127,4 @@ Ideally, your team should be able to show:
 7. the next question you plan to investigate.
 
 That is enough to demonstrate real progress.
+

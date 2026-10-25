@@ -17,3 +17,9 @@ Revised all five tutorials and their index. Added explicit vocabulary, small fun
 Validation: all five revised notebooks passed structure validation and execution in separate fresh IPython processes. eBird empty-list, missing-count, and ordinary-response branches were exercised with mocked HTTP responses; this does not validate a live credentialed request. Jupyter kernel sockets are blocked by the audit environment, including IPC, so no claim of full Jupyter frontend or hosted execution is made. The included validator records this distinction and skips the local-GUI Turtle notebook.
 
 This report is being extended as the remaining batches are completed.
+
+## Batch 2 — Capstone
+
+Extended the existing beginner pathway with the research-tree distinction, responsible interpretation, report writing, presentation guidance, and reproducibility/accessibility. Added a copyable per-session journal and an immediately runnable first-result example. Clarified group row counts versus known measurements in the starter notebook. Explained model baselines and metrics without making machine learning a requirement. Prior capstone files are preserved under `archive/pre_audit/capstone/`.
+
+Validation: starter notebook structure and fresh-process execution checked; local Markdown links checked. Current Canvas requirements override planning scales on this durable resource.
