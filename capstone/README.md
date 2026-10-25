@@ -4,7 +4,7 @@ The capstone is where your team uses Python and data to investigate a question y
 
 This is a **beginner capstone for a first Python/data-science course**. A strong project does **not** require advanced machine learning. Careful questions, reliable data, simple analysis, clear interpretation, and reproducible work matter more than complicated methods.
 
-[← Return to the course website](../)
+[← Return to the course website](https://mathguy-uf.github.io/MAD2502/)
 
 ## The 12-step beginner pathway
 
@@ -138,4 +138,4 @@ If Python or data science is still new, use the Applied Data materials:
 
 The goal is not to memorize commands. The goal is to learn a repeatable process for turning data into evidence.
 
-[← Return to the course website](../)
+[← Return to the course website](https://mathguy-uf.github.io/MAD2502/)
