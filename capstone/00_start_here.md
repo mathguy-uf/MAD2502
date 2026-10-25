@@ -23,19 +23,7 @@ Your first goal is **not** to build a machine-learning model.
 
 Your first goal is to get one complete path working:
 
-```text
-source
-  ↓
-Python reads the data
-  ↓
-you inspect the rows and columns
-  ↓
-you compute one useful result
-  ↓
-you make one labeled graph or table
-  ↓
-you explain what it means
-```
+Read a source in Python, inspect the rows, compute one small result, and explain it with a labeled table or graph.
 
 If your team can do that, the project is moving.
 

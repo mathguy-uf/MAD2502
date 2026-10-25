@@ -4,7 +4,7 @@
 
 Your audience should understand the question, the evidence, and the conclusion without seeing every notebook cell. Follow one clear path through the [research tree](06_research_tree.md), while keeping limitations visible.
 
-The existing course guidance uses a 10–12 minute presentation with a firm time limit. Check Canvas for the current limit and delivery requirements.
+Check Canvas for the presentation time limit and delivery requirements. Rehearse to finish within that limit.
 
 ## Plan the story before making slides
 

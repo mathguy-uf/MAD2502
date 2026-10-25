@@ -44,7 +44,7 @@ Your project is probably in reasonable scope if your team can answer yes to most
 - Do we have the variables needed for the question?
 - Can we produce one result within a week?
 - Can we explain the main analysis to classmates?
-- Can the project fit into a 10–12 minute presentation?
+- Can the main result fit within the presentation limit posted in Canvas?
 
 ## Warning signs that the project is too large
 

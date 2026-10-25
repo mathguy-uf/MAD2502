@@ -98,7 +98,7 @@ Start with a baseline and a small number of predictors.
 
 A simple classification model may be reasonable if your outcome is categorical.
 
-For an introductory project, begin with an interpretable method such as logistic regression before reaching for a complicated model.
+First count the categories and establish a baseline, such as always predicting the most common training category. A classifier is optional. Use one only if the team can explain how it turns inputs into a category, how it is evaluated, and where it fails.
 
 ## Do not choose a model because it sounds advanced
 
@@ -112,7 +112,7 @@ Better reason:
 
 The method should serve the question.
 
-## Train/test language for beginners
+## Optional extension: train/test language
 
 If you build a predictive model, separate data used to **fit** the model from data used to **evaluate** it.
 
@@ -132,13 +132,12 @@ Do not evaluate a model only on the same data used to fit it.
 
 A simulation repeats a simplified model under stated assumptions. For example, compare how the fraction of heads varies across repeated sets of 10 versus 100 fair coin flips. Explain the probability model, number of trials, random seed, and the difference between model behavior and real-world evidence. A larger simulation does not fix unrealistic assumptions.
 
-## Good beginner metrics
+## Optional extension: interpreting model metrics
 
 Depending on the problem:
 
 - regression: MAE, RMSE, or $R^2$;
 - classification: accuracy, precision, recall, confusion matrix;
-- ranking/survival/specialized projects: use a metric appropriate to that domain and explain it in plain language.
 
 MAE is the average absolute prediction error, in the outcome's units. RMSE gives larger errors more weight, in those same units. $R^2$ compares squared error with a constant-mean baseline and can be negative on test data. Accuracy is the fraction of correct category predictions; a confusion matrix shows which categories were confused. Precision asks how often a predicted positive was correct; recall asks how many actual positives were found. On imbalanced data, accuracy alone may be misleading.
 
@@ -176,7 +175,22 @@ Your project probably has enough methods when:
 - the main question has been answered;
 - additional models are not changing the story;
 - you can explain every major step;
-- you have enough material for the report and 10–12 minute presentation.
+- you have enough material to explain the result within the current Canvas requirements.
 
 Depth is better than a long list of disconnected techniques.
 
+
+## A percentage needs a denominator
+
+If `data["category"]` stores category labels, this counts each category, including missing labels, and divides by the total row count:
+
+```python
+counts = data["category"].value_counts(dropna=False)
+if len(data) > 0:
+    percentages = 100 * counts / len(data)
+    print(percentages)
+else:
+    print("No rows: there is no percentage to report.")
+```
+
+Explain whether missing categories belong in the denominator for your question. A percentage without its population and row count is easy to misinterpret.

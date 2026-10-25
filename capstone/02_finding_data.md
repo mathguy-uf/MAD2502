@@ -129,3 +129,17 @@ For one candidate source, write a short source evaluation with:
 Before committing to a source, map each part of the question to a real column. Record the variable name, units, missingness, time coverage, and what is measured versus merely approximated. If the question asks about posting time but the file contains only a collection date, revise the question or find a better source. A relevant-looking title is not enough.
 
 Keep sensitive records in approved private systems. Use the public course repository only for fictional or appropriately public teaching data.
+
+
+## Try a data-fit check now
+
+For the practice question “How do indoor and outdoor event attendance values compare?”, check the actual columns before choosing a method:
+
+| Needed idea | Column to find | Check | If absent |
+|---|---|---|---|
+| One event | Event identifier or documented row definition | Can the same event appear twice? | Resolve the row meaning first. |
+| Attendance | A numeric attendee count | Is it measured, estimated, or missing? | Revise the outcome or find another source. |
+| Indoor/outdoor group | Location type | Are labels consistent? | Do not infer it from a vague venue name. |
+| Comparable period | Event date | Do both groups cover comparable dates? | Narrow the claim or document the mismatch. |
+
+Make the same table for your question. Use the [data dictionary template](../templates/data_dictionary.md) to keep your findings. A filename or dataset title alone does not show that the needed variables are present.

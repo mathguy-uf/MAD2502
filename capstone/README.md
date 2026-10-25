@@ -51,29 +51,13 @@ The example data inside it are intentionally tiny so the notebook runs before yo
 
 ## The project path
 
-```text
-question
-   ↓
-source
-   ↓
-load data in Python
-   ↓
-inspect and clean
-   ↓
-first result
-   ↓
-visualize / compare / model
-   ↓
-interpret
-   ↓
-revise question
-   ↓
-report + presentation
-```
+Choose a question → find data → load and inspect → compute a result → interpret → revise → report and present.
 
 Real projects branch as well as moving backward and forward. The [research tree](06_research_tree.md) shows how the report records the broader process while the presentation selects one clear path.
 
 ## What counts as enough Python?
+
+The commands below are a vocabulary list; they are methods/attributes used on an existing table, such as `data.head()` and `data.shape`. See the runnable starter for complete examples.
 
 A project does **not** need to use the most complicated method in the course.
 
@@ -126,7 +110,7 @@ Canvas remains authoritative for current lengths, time limits, dates, deadlines,
 
 ## Final report
 
-As a general scale, plan for approximately **five pages per team member**. A three-person team should therefore expect roughly fifteen pages, although clarity is more important than hitting an exact page count.
+Use Canvas for the required report length. Use the journal and research tree to decide what evidence and reasoning the report needs.
 
 The report should explain:
 
@@ -143,7 +127,7 @@ The report should explain:
 
 ## Presentation
 
-Plan for a **10–12 minute presentation**.
+Use the presentation time limit posted in Canvas.
 
 The research process may be messy. The presentation should make the final path easy to follow:
 

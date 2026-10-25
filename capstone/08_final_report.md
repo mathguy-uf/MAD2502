@@ -15,7 +15,7 @@ The report documents the broader [research tree](06_research_tree.md). Start wit
 7. **Conclusion and next steps:** answer the question at the scale supported by the data.
 8. **Reproducibility notes and references:** files, environment, exact run order, and source citations.
 
-The existing course guidance uses roughly five pages per team member as a planning scale. Follow Canvas for the current required length, submission format, dates, and grading rules. Do not pad the report with unexplained code or repeat the same graph in several forms.
+Follow Canvas for the required length, submission format, dates, and grading rules. Do not pad the report with unexplained code or repeat the same graph in several forms.
 
 ## Turn one journal entry into a paragraph
 
