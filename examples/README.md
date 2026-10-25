@@ -4,6 +4,7 @@ These notebooks are optional explorations and demonstrations. They are not part 
 
 - **brownian_motion.ipynb** — floating-point behavior and random motion.
 - **intset_example.ipynb** — a small object-oriented programming example.
+- **oop_examples.ipynb** — beginner-friendly OOP examples using `Person`, `Student`, game enemies, rectangles/squares, encapsulation, and operator overloading.
 - **monte_carlo.ipynb** — random simulation and estimation.
 - **palindrome.ipynb** — recursion and recursive tracing.
 - **sierpinski.ipynb** — iterative computation and fractal structure.
