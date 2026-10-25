@@ -1,0 +1,64 @@
+name: Featured lecture fallback
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update static featured fallback
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("index.html")
+          text = path.read_text(encoding="utf-8")
+          text = text.replace(
+              '<a class="button button-primary" href="#current">Continue the course</a>',
+              '<a class="button button-primary" href="#current">Explore a featured lecture</a>',
+          )
+          old = '''          <div class="current-badge">CURRENTLY IN CLASS</div>
+          <div class="current-main">
+            <div>
+              <p class="section-kicker">Chapter 12</p>
+              <h2 id="current-title">Graphics &amp; Visualization</h2>
+              <p>Build clear plots with Matplotlib, work with interactive figures, and see how computation becomes something you can communicate visually.</p>
+            </div>
+            <div class="current-actions">
+              <span class="status-pill">Current unit</span>
+              <span class="button button-disabled" aria-disabled="true">Current notebook coming soon</span>
+            </div>
+          </div>'''
+          new = '''          <div class="current-badge">FEATURED FROM THE COURSE</div>
+          <div class="current-main">
+            <div>
+              <p class="section-kicker">Chapter 9</p>
+              <h2 id="current-title">Floating-Point Arithmetic</h2>
+              <p>See why computers cannot represent every real number exactly, explore IEEE-754, and learn why numerical comparisons need tolerance.</p>
+            </div>
+            <div class="current-actions">
+              <span class="status-pill">Featured notebook</span>
+              <a class="button button-primary" href="https://github.com/mathguy-uf/MAD2502/blob/main/lectures/09_floating_point.ipynb">View on GitHub</a>
+              <a class="button button-secondary" href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/lectures/09_floating_point.ipynb">Run in Colab</a>
+              <a class="button button-secondary" href="https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/lectures/09_floating_point.ipynb">Launch Binder</a>
+            </div>
+          </div>'''
+          if old not in text:
+              raise SystemExit("Expected current-section markup not found")
+          path.write_text(text.replace(old, new), encoding="utf-8")
+          PY
+
+      - name: Commit update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Replace current lecture with featured fallback"
+          git push
