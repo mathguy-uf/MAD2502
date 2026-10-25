@@ -59,15 +59,73 @@ function notebookActions(path) {
   return wrapper;
 }
 
-// Current class: Chapter 12 is now live.
-const currentActions = document.querySelector('#current .current-actions');
-if (currentActions) {
-  const urls = notebookUrls('lectures/12_graphics.ipynb');
-  currentActions.innerHTML = `
-    <span class="status-pill">Current unit</span>
-    <a class="button button-primary" href="${urls.github}">View Chapter 12</a>
-    <a class="button button-secondary" href="${urls.colab}">Run in Colab</a>
-    <a class="button button-secondary" href="${urls.binder}">Launch Binder</a>`;
+// A different strong lecture is featured each day. This is not tied to the
+// current class unit, so the homepage does not require weekly maintenance.
+const featuredLectures = [
+  {
+    chapter: 'Chapter 12',
+    title: 'Graphics & Visualization',
+    description: 'Build clear plots with Matplotlib, understand Figure and Axes, explore 3-D graphics, maps, animation, and accessible visual communication.',
+    path: 'lectures/12_graphics.ipynb',
+  },
+  {
+    chapter: 'Chapter 9',
+    title: 'Floating-Point Arithmetic',
+    description: 'See why computers cannot represent every real number exactly, explore IEEE-754, and learn why numerical comparisons need tolerance.',
+    path: 'lectures/09_floating_point.ipynb',
+  },
+  {
+    chapter: 'Chapter 19',
+    title: 'Root Finding',
+    description: 'Compare bisection and Newton’s method, visualize convergence, and investigate memorable cases where Newton’s method fails.',
+    path: 'lectures/19_root_finding.ipynb',
+  },
+  {
+    chapter: 'Chapter 16',
+    title: 'Least-Squares Regression',
+    description: 'Connect data, models, residuals, SSE, R², and nonlinear fitting while keeping interpretation and model limitations in view.',
+    path: 'lectures/16_regression.ipynb',
+  },
+  {
+    chapter: 'Chapter 6',
+    title: 'Recursion',
+    description: 'Trace recursive calls, identify base cases, and use factorial, Fibonacci, and palindrome examples to understand self-referential computation.',
+    path: 'lectures/06_recursion.ipynb',
+  },
+  {
+    chapter: 'Chapter 11',
+    title: 'Working with Files',
+    description: 'Compare TXT, CSV, JSON, Pickle, and HDF5 while learning paths, safe file handling, and how data moves into Python.',
+    path: 'lectures/11_files.ipynb',
+  },
+];
+
+const featuredIndex = Math.floor(Date.now() / 86400000) % featuredLectures.length;
+const featuredLecture = featuredLectures[featuredIndex];
+const currentSection = document.getElementById('current');
+
+if (currentSection && featuredLecture) {
+  const badge = currentSection.querySelector('.current-badge');
+  const kicker = currentSection.querySelector('.section-kicker');
+  const title = currentSection.querySelector('#current-title');
+  const description = currentSection.querySelector('.current-main > div:first-child p:last-child');
+  const actions = currentSection.querySelector('.current-actions');
+  const heroPrimary = document.querySelector('.hero-actions .button-primary[href="#current"]');
+  const urls = notebookUrls(featuredLecture.path);
+
+  if (badge) badge.textContent = 'FEATURED FROM THE COURSE';
+  if (kicker) kicker.textContent = featuredLecture.chapter;
+  if (title) title.textContent = featuredLecture.title;
+  if (description) description.textContent = featuredLecture.description;
+  if (heroPrimary) heroPrimary.textContent = 'Explore a featured lecture';
+
+  if (actions) {
+    actions.innerHTML = `
+      <span class="status-pill">Featured notebook</span>
+      <a class="button button-primary" href="${urls.github}">View on GitHub</a>
+      <a class="button button-secondary" href="${urls.colab}">Run in Colab</a>
+      <a class="button button-secondary" href="${urls.binder}">Launch Binder</a>`;
+  }
 }
 
 // Canonical reviewed lecture set. Chapter numbers follow the course textbook.
