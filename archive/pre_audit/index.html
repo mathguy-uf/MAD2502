@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0021A5">
+  <meta name="description" content="MAD 2502 Computational Mathematics with Python course resources: lectures, applied data tutorials, capstone help, examples, and GitHub guidance.">
+  <title>MAD 2502 | Computational Mathematics</title>
+  <link rel="stylesheet" href="style.css?v=1.0.1">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="MAD 2502 home">
+        <span class="brand-mark" aria-hidden="true">2502</span>
+        <span><strong>MAD 2502</strong><small>Computational Mathematics</small></span>
+      </a>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <a href="#lectures">Lectures</a>
+        <a href="#applied-data">Applied Data</a>
+        <a href="#capstone">Capstone</a>
+        <a href="#github">Using GitHub</a>
+        <a href="#examples">Examples</a>
+        <a class="nav-github" href="https://github.com/mathguy-uf/MAD2502">Repository</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-grid page-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">UNIVERSITY OF FLORIDA · MAD 2502</p>
+          <h1>Computational Mathematics <span>with Python</span></h1>
+          <p class="hero-lead">Learn the ideas, experiment with code, work with real data, and build a computational project of your own.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#current">Continue the course</a>
+            <a class="button button-secondary" href="#github">New to GitHub?</a>
+          </div>
+          <div class="hero-tags" aria-label="Course topics">
+            <span>Python</span><span>Computational thinking</span><span>APIs</span><span>pandas</span><span>Visualization</span>
+          </div>
+        </div>
+
+        <aside class="code-card" aria-label="Course idea">
+          <div class="code-card-top"><span></span><span></span><span></span></div>
+          <pre><code><span class="code-comment"># computational thinking</span>
+question = <span class="code-string">"What can we learn?"</span>
+
+data = get_data()
+result = analyze(data)
+
+<span class="code-keyword">if</span> result.is_interesting():
+    explain(result)
+    ask_better_question()</code></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section class="current-section" id="current" aria-labelledby="current-title">
+      <div class="page-shell">
+        <div class="current-card">
+          <div class="current-badge">CURRENTLY IN CLASS</div>
+          <div class="current-main">
+            <div>
+              <p class="section-kicker">Chapter 12</p>
+              <h2 id="current-title">Graphics &amp; Visualization</h2>
+              <p>Build clear plots with Matplotlib, work with interactive figures, and see how computation becomes something you can communicate visually.</p>
+            </div>
+            <div class="current-actions">
+              <span class="status-pill">Current unit</span>
+              <span class="button button-disabled" aria-disabled="true">Current notebook coming soon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pathways page-shell" aria-labelledby="pathways-title">
+      <div class="section-heading centered-heading">
+        <p class="section-kicker">CHOOSE WHERE YOU NEED TO GO</p>
+        <h2 id="pathways-title">Use the course, not the file tree</h2>
+        <p>Start with what you are trying to do. The website will take you to the right notebook or resource.</p>
+      </div>
+
+      <div class="pathway-grid">
+        <a class="pathway-card blue-card" href="#lectures"><span class="pathway-number">01</span><span class="pathway-icon" aria-hidden="true">&lt;/&gt;</span><h3>Lectures</h3><p>Follow the course from Python foundations into computational mathematics.</p><span class="card-link">View lectures →</span></a>
+        <a class="pathway-card orange-card" href="#applied-data"><span class="pathway-number">02</span><span class="pathway-icon" aria-hidden="true">{ }</span><h3>Applied Data</h3><p>Use APIs, pandas, web data, files, and visualization with real information.</p><span class="card-link">Explore data →</span></a>
+        <a class="pathway-card green-card" href="#capstone"><span class="pathway-number">03</span><span class="pathway-icon" aria-hidden="true">▲</span><h3>Capstone</h3><p>Move from an idea to data, analysis, a report, and a clear presentation.</p><span class="card-link">Build your project →</span></a>
+        <a class="pathway-card purple-card" href="#github"><span class="pathway-number">04</span><span class="pathway-icon" aria-hidden="true">git</span><h3>Using GitHub</h3><p>Learn the few Git commands you actually need and choose how to run notebooks.</p><span class="card-link">Learn the workflow →</span></a>
+      </div>
+    </section>
+
+    <section class="content-section light-section" id="lectures" aria-labelledby="lectures-title">
+      <div class="page-shell">
+        <div class="section-heading split-heading">
+          <div><p class="section-kicker">LEARN</p><h2 id="lectures-title">Lectures</h2><p>Course notebooks are meant to be run, changed, broken, fixed, and run again.</p></div>
+          <a class="text-link" href="https://github.com/mathguy-uf/MAD2502">Browse repository →</a>
+        </div>
+
+        <div class="unit-label"><span>Python foundations</span></div>
+        <div class="resource-grid">
+          <article class="resource-card available">
+            <div class="resource-top"><span class="chapter">03</span><span class="available-label">Available</span></div>
+            <h3>Functions &amp; Scope</h3>
+            <p>Functions, parameters, keyword arguments, local variables, and nested functions.</p>
+            <div class="notebook-actions">
+              <a href="https://github.com/mathguy-uf/MAD2502/blob/main/Lecture03.ipynb">View on GitHub</a>
+              <a href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/Lecture03.ipynb">Run in Colab</a>
+              <a href="https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/Lecture03.ipynb">Launch Binder</a>
+            </div>
+          </article>
+          <article class="resource-card planned"><div class="resource-top"><span class="chapter">04</span><span class="planned-label">Updating</span></div><h3>Branching</h3><p>Boolean expressions, decisions, and <code>if / elif / else</code>.</p><span class="resource-link muted">Current notebook will be added</span></article>
+          <article class="resource-card planned"><div class="resource-top"><span class="chapter">05</span><span class="planned-label">Updating</span></div><h3>Iteration</h3><p><code>for</code> loops, <code>while</code> loops, repeated computation, and patterns.</p><span class="resource-link muted">Current notebook will be added</span></article>
+          <article class="resource-card planned"><div class="resource-top"><span class="chapter">06</span><span class="planned-label">Updating</span></div><h3>Recursion</h3><p>Base cases, recursive calls, execution tracing, and recursive problem solving.</p><span class="resource-link muted">Current notebook will be added</span></article>
+        </div>
+
+        <div class="unit-label"><span>More course material</span></div>
+        <div class="resource-grid">
+          <article class="resource-card available">
+            <div class="resource-top"><span class="chapter">07</span><span class="available-label">Archive copy</span></div>
+            <h3>Files &amp; Data Structures</h3><p>Text files, tuples, lists, nested lists, and identity.</p>
+            <div class="notebook-actions"><a href="https://github.com/mathguy-uf/MAD2502/blob/main/Lecture07.ipynb">View on GitHub</a><a href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/Lecture07.ipynb">Run in Colab</a><a href="https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/Lecture07.ipynb">Launch Binder</a></div>
+          </article>
+          <article class="resource-card available">
+            <div class="resource-top"><span class="chapter">08</span><span class="available-label">Archive copy</span></div>
+            <h3>Collections &amp; Iteration</h3><p>Lists, dictionaries, mapping, membership, and string operations.</p>
+            <div class="notebook-actions"><a href="https://github.com/mathguy-uf/MAD2502/blob/main/Lecture08.ipynb">View on GitHub</a><a href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/Lecture08.ipynb">Run in Colab</a><a href="https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/Lecture08.ipynb">Launch Binder</a></div>
+          </article>
+          <article class="resource-card available">
+            <div class="resource-top"><span class="chapter">09</span><span class="available-label">Archive copy</span></div>
+            <h3>Errors &amp; Exceptions</h3><p>Runtime errors, input validation, <code>try / except</code>, and raising errors.</p>
+            <div class="notebook-actions"><a href="https://github.com/mathguy-uf/MAD2502/blob/main/Lecture09.ipynb">View on GitHub</a><a href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/Lecture09.ipynb">Run in Colab</a><a href="https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/Lecture09.ipynb">Launch Binder</a></div>
+          </article>
+          <article class="resource-card planned"><div class="resource-top"><span class="chapter">10–12</span><span class="planned-label">Updating</span></div><h3>Arithmetic, Files &amp; Graphics</h3><p>IEEE-754, current file formats, Matplotlib, animation, and visualization.</p><span class="resource-link muted">Current notebooks will replace older material</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="applied-data" aria-labelledby="data-title">
+      <div class="page-shell">
+        <div class="section-heading split-heading"><div><p class="section-kicker">USE IT</p><h2 id="data-title">Applied Data</h2><p>Move from an outside data source to something you can actually investigate.</p></div><a class="text-link" href="https://github.com/mathguy-uf/MAD2502/blob/main/applied_data/README.md">Learning path →</a></div>
+        <div class="pipeline" aria-label="Applied data workflow"><span>Source</span><b>→</b><span>Python</span><b>→</b><span>DataFrame</span><b>→</b><span>Question</span><b>→</b><span>Result</span></div>
+        <div class="tutorial-grid">
+          <article class="tutorial-card"><div class="tutorial-step">01</div><p class="tutorial-type">TALK TO AN API</p><h3>eBird API</h3><p>API keys, endpoints, HTTP requests, JSON, species and region codes, and DataFrames.</p><span class="tutorial-flow">requests → JSON → pandas</span><span class="button button-disabled" aria-disabled="true">Notebook coming soon</span></article>
+          <article class="tutorial-card"><div class="tutorial-step">02</div><p class="tutorial-type">WORK WITH DATA</p><h3>pandas Basics</h3><p>DataFrames, selection, filtering, sorting, missing values, summaries, and CSV files.</p><span class="tutorial-flow">CSV → DataFrame → analysis</span><span class="button button-disabled" aria-disabled="true">Notebook coming soon</span></article>
+          <article class="tutorial-card"><div class="tutorial-step">03</div><p class="tutorial-type">GET DATA FROM THE WEB</p><h3>Statistics Villains</h3><p>HTML tables, responsible scraping, cleaning, and analysis with the class Statistics Villains page.</p><span class="tutorial-flow">HTML → table → DataFrame</span><span class="button button-disabled" aria-disabled="true">Notebook coming soon</span></article>
+          <article class="tutorial-card rescue-card"><div class="tutorial-step">04</div><p class="tutorial-type">WHEN THINGS GO WRONG</p><h3>Data Rescue Kit</h3><p>File paths, strange columns, missing values, dates, nested JSON, duplicates, and common pandas problems.</p><span class="tutorial-flow">problem → diagnose → fix</span><span class="button button-disabled" aria-disabled="true">Notebook coming soon</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section capstone-section" id="capstone" aria-labelledby="capstone-title">
+      <div class="page-shell capstone-grid">
+        <div class="section-heading"><p class="section-kicker">BUILD SOMETHING</p><h2 id="capstone-title">Capstone Project</h2><p>Your project is not a straight line. Good computational work includes changed questions, failed ideas, and better approaches.</p><a class="button button-light" href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/README.md">Open capstone guide</a></div>
+        <ol class="project-path" aria-label="Capstone project process">
+          <li><span>1</span><div><strong>Question</strong><small>Choose something worth investigating.</small></div></li>
+          <li><span>2</span><div><strong>Sources</strong><small>Find reliable data and references.</small></div></li>
+          <li><span>3</span><div><strong>First result</strong><small>Get one meaningful Python result working.</small></div></li>
+          <li><span>4</span><div><strong>Explore</strong><small>Analyze, revise, make mistakes, and learn.</small></div></li>
+          <li><span>5</span><div><strong>Tell the story</strong><small>Make the report and presentation coherent.</small></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="github-guide" id="github" aria-labelledby="github-title">
+      <div class="page-shell github-grid">
+        <div>
+          <div class="section-heading">
+            <p class="section-kicker">NEW TO GITHUB?</p>
+            <h2 id="github-title">You only need a few things.</h2>
+            <p>GitHub stores the course material. You can read a notebook there, run it in a hosted browser, or keep your own local copy with Git.</p>
+          </div>
+          <div class="github-methods">
+            <div class="github-method"><span>1</span><div><strong>View on GitHub</strong><small>Best for reading code and saved output. Nothing runs.</small></div></div>
+            <div class="github-method"><span>2</span><div><strong>Run in Colab</strong><small>Usually the easiest way to execute and change one notebook in a browser.</small></div></div>
+            <div class="github-method"><span>3</span><div><strong>Launch Binder</strong><small>Opens the repository in a temporary browser-based JupyterLab environment.</small></div></div>
+          </div>
+          <p><a class="button button-light" href="https://github.com/mathguy-uf/MAD2502/blob/main/START_HERE.md">Full Git &amp; Jupyter guide</a></p>
+        </div>
+
+        <div>
+          <div class="terminal-card" aria-label="Git commands for MAD 2502">
+            <div class="terminal-title">Terminal · first time only</div>
+            <pre><code><span class="prompt">$</span> cd Documents
+<span class="prompt">$</span> git clone https://github.com/mathguy-uf/MAD2502.git
+<span class="prompt">$</span> cd MAD2502
+<span class="prompt">$</span> python -m pip install -r requirements.txt
+<span class="prompt">$</span> jupyter lab</code></pre>
+          </div>
+          <div class="terminal-card" style="margin-top:14px" aria-label="Git commands for later course sessions">
+            <div class="terminal-title">Terminal · later course sessions</div>
+            <pre><code><span class="prompt">$</span> cd Documents/MAD2502
+<span class="prompt">$</span> git pull
+<span class="prompt">$</span> jupyter lab</code></pre>
+          </div>
+          <table class="command-table">
+            <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+            <tbody>
+              <tr><td><code>pwd</code></td><td>Show your current folder.</td></tr>
+              <tr><td><code>ls</code></td><td>List files and folders.</td></tr>
+              <tr><td><code>cd folder</code></td><td>Move into a folder.</td></tr>
+              <tr><td><code>cd ..</code></td><td>Move up one folder.</td></tr>
+              <tr><td><code>git clone URL</code></td><td>Make your first local copy.</td></tr>
+              <tr><td><code>git pull</code></td><td>Get the newest course updates.</td></tr>
+              <tr><td><code>git status</code></td><td>See files you changed locally.</td></tr>
+            </tbody>
+          </table>
+          <p style="color:#b9c4d8;font-size:.82rem"><strong style="color:white">Student rule of thumb:</strong> for this repository you normally need <code>git pull</code>, not <code>git push</code>. Make a personal copy before heavily editing an instructor notebook.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section light-section" id="examples" aria-labelledby="examples-title">
+      <div class="page-shell">
+        <div class="section-heading"><p class="section-kicker">EXPLORE</p><h2 id="examples-title">Computational Examples</h2><p>Interesting notebooks that are useful even when they are not part of the current lecture sequence.</p></div>
+        <div class="example-list">
+          <a href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/palindrome.ipynb"><span>Recursion</span><strong>Palindrome Tester</strong><small>Open in Colab</small></a>
+          <a href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/IntSetExample.ipynb"><span>Objects</span><strong>Integer Set Class</strong><small>Open in Colab</small></a>
+          <a href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/monte_carlo.ipynb"><span>Simulation</span><strong>Monte Carlo</strong><small>Open in Colab</small></a>
+          <a href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/BrownianMotion.ipynb"><span>Simulation</span><strong>Brownian Motion</strong><small>Open in Colab</small></a>
+          <a href="https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/sierpinski.ipynb"><span>Fractals</span><strong>Sierpiński</strong><small>Open in Colab</small></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="help-strip">
+      <div class="page-shell help-grid">
+        <div><p class="section-kicker">STUCK?</p><h2>Start with the error, not with panic.</h2><p>Read the message. Check the cell above it. Check variable names, types, file paths, and the selected Python kernel. Debugging is part of computational mathematics.</p></div>
+        <a class="button button-light" href="https://github.com/mathguy-uf/MAD2502/blob/main/START_HERE.md">Troubleshooting basics</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-grid"><div><strong>MAD 2502 · Computational Mathematics</strong><p>Course resources maintained by Jason Harrington.</p></div><div class="footer-links"><a href="https://github.com/mathguy-uf/MAD2502">GitHub repository</a><a href="#top">Back to top ↑</a></div></div>
+    <div class="page-shell footer-note">Educational course resource. This is not an official University of Florida website.</div>
+  </footer>
+
+  <script src="script.js?v=1.0.0"></script>
+</body>
+</html>
+

@@ -1,15 +1,19 @@
-# Computational Examples
+# Optional computational examples
 
-These notebooks are optional explorations and demonstrations. They are not part of the required lecture sequence.
+These are supplemental explorations. Start with the lecture prerequisites named in each notebook. Random examples use seeds and modest defaults. Advanced concepts are identified as extensions.
 
-- **brownian_motion.ipynb** — floating-point behavior and random motion.
-- **intset_example.ipynb** — a small object-oriented programming example.
-- **oop_examples.ipynb** — beginner-friendly OOP examples using `Person`, `Student`, game enemies, rectangles/squares, encapsulation, and operator overloading.
-- **monte_carlo.ipynb** — random simulation and estimation.
-- **palindrome.ipynb** — recursion and recursive tracing.
-- **sierpinski.ipynb** — iterative computation and fractal structure.
-- **turtle_graphics.ipynb** — optional local graphics example using loops, functions, geometry, and repeated transformations. Standard `turtle` opens a desktop window, so this example is intended for a local Python/Jupyter installation rather than Colab or Binder.
+| Example | Open |
+|---|---|
+| Random walks and Brownian approximation | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/brownian_motion.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/brownian_motion.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/brownian_motion.ipynb) |
+| Collections: lists, tuples, and dictionaries | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/collections.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/collections.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/collections.ipynb) |
+| Floating-point dynamics | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/floating_point_dynamics.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/floating_point_dynamics.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/floating_point_dynamics.ipynb) |
+| An integer-set class | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/intset_example.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/intset_example.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/intset_example.ipynb) |
+| Monte Carlo estimation of pi | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/monte_carlo.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/monte_carlo.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/monte_carlo.ipynb) |
+| Object-Oriented Programming: Extra Examples | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/oop_examples.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/oop_examples.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/oop_examples.ipynb) |
+| OOP models: cat, car, and parabola | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/oop_models.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/oop_models.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/oop_models.ipynb) |
+| Palindrome testing and tracing | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/palindrome.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/palindrome.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/palindrome.ipynb) |
+| Dice and coin simulations | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/random_simulation.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/random_simulation.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/random_simulation.ipynb) |
+| Sierpiński triangle | [View on GitHub](https://github.com/mathguy-uf/MAD2502/blob/main/examples/sierpinski.ipynb) · [Run in Google Colab](https://colab.research.google.com/github/mathguy-uf/MAD2502/blob/main/examples/sierpinski.ipynb) · [Launch Binder/JupyterLab](https://mybinder.org/v2/gh/mathguy-uf/MAD2502/main?urlpath=lab/tree/examples/sierpinski.ipynb) |
+| Turtle Graphics | [View on GitHub](turtle_graphics.ipynb) · Local desktop only |
 
-Most of these examples are supplemental rather than part of the required lecture sequence. Some older examples may still use older code or plotting conventions; use them to explore ideas, while the main course tutorials remain the primary source for current syntax and workflow.
-
-[← Return to the course website](../)
+[Course home](https://mathguy-uf.github.io/MAD2502/) · [Preserved historical material](../archive/README.md)

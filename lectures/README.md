@@ -146,7 +146,7 @@ factorial(4)
 
 **Use:** Palindrome testing, recursively defined mathematics, and divide-and-conquer ideas.
 
-[Palindrome example](../palindrome.ipynb)
+[Palindrome example](../examples/palindrome.ipynb)
 
 ---
 
@@ -172,7 +172,7 @@ class Counter:
 
 **Use:** Model objects whose data and operations belong together. Focus on instances, attributes, methods, `__init__`, `__str__`, and inheritance.
 
-[IntSet example](../IntSetExample.ipynb)
+[IntSet example](../examples/intset_example.ipynb)
 
 ---
 
@@ -272,3 +272,4 @@ capstone project
 When a project becomes complicated, break it back into these smaller pieces. A good project is usually a collection of understandable functions and data transformations, not one giant block of code.
 
 [← Return to the course website](../)
+

@@ -23,3 +23,9 @@ This report is being extended as the remaining batches are completed.
 Extended the existing beginner pathway with the research-tree distinction, responsible interpretation, report writing, presentation guidance, and reproducibility/accessibility. Added a copyable per-session journal and an immediately runnable first-result example. Clarified group row counts versus known measurements in the starter notebook. Explained model baselines and metrics without making machine learning a requirement. Prior capstone files are preserved under `archive/pre_audit/capstone/`.
 
 Validation: starter notebook structure and fresh-process execution checked; local Markdown links checked. Current Canvas requirements override planning scales on this durable resource.
+
+## Batch 3 — Optional examples
+
+Preserved all prior example notebooks under `archive/pre_audit/examples/`. Moved root `Lecture07.ipynb`, `Lecture08.ipynb`, `lecture15.ipynb`, and `exam2_review_python.ipynb` into `archive/legacy_root/` with lowercase names. Their current teaching material is in `examples/collections.ipynb`, `random_simulation.ipynb`, and `oop_models.ipynb`; TXT-file introductions are covered in Chapter 11. Split mixed Brownian/dynamics/dice content into distinct examples. Corrected displacement semantics, equilateral triangle geometry, parabola labels, odometer validation, empty IntSet means, and a confidence-interval label; replaced very long simulation runs with modest reproducible defaults. Kept intentional list-mutation and index-error demonstrations explicit. Turtle remains local-GUI only.
+
+Examples validation: 10 notebooks executed successfully in independent IPython processes; Turtle passed static checks only. The expected IndexError in collections was verified by type. Links to moved root examples were repaired in the existing site and lecture index.
