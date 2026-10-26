@@ -126,6 +126,22 @@ That is not automatically a failure. Record it in the [Project Journal](05_proje
 
 The expectations above describe the current capstone structure. Canvas remains authoritative if it gives a different due date, page requirement, presentation time, grading rule, submission instruction, or course-specific AI-use requirement.
 
+## Working with your group on GitHub
+
+If your team wants one shared place for code, notebooks, figures, and project history, use the **[GitHub for a Group Project](11_github_group_projects.md)** guide.
+
+It is written for beginners and covers:
+
+- creating one shared repository and adding collaborators;
+- cloning the repository once;
+- the everyday `pull → work → commit → push` cycle;
+- dividing work so teammates do not overwrite each other;
+- why two people should avoid editing the same Jupyter notebook at the same time;
+- what to do when a push is rejected or a merge conflict appears;
+- keeping API keys and private information out of GitHub.
+
+For a first capstone, the goal is not to master every Git feature. The goal is to keep one reliable shared project without losing each other's work.
+
 ## Technical help
 
 If Python or data science is still new, use the Applied Data materials:
