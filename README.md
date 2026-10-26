@@ -7,6 +7,7 @@ The repository is organized around the way the course is used:
 - **[Lectures](lectures/README.md)** — reviewed Python and computational mathematics notebooks.
 - **[Applied Data](applied_data/README.md)** — APIs, pandas, web data, and practical data workflows.
 - **[Capstone](capstone/README.md)** — project planning, research process, analysis, report, and presentation guidance.
+- **[GitHub for Group Projects](capstone/11_github_group_projects.md)** — a beginner workflow for sharing code and notebooks without overwriting teammates' work.
 - **[Examples](examples/)** — additional computational demonstrations and simulations.
 
 ## Course website
@@ -30,6 +31,8 @@ See **[START_HERE.md](START_HERE.md)** for:
 - package installation;
 - file-path troubleshooting;
 - API-key safety.
+
+Working on a capstone with teammates? See **[GitHub for a Group Project](capstone/11_github_group_projects.md)** for the shared `pull → work → commit → push` workflow.
 
 ## Three ways to use notebooks
 
