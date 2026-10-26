@@ -93,6 +93,26 @@ You can always check what Git sees with:
 git status
 ```
 
+## Working on a group project
+
+The workflow above is for **using the instructor's course repository**. A capstone group is different because your teammates need to share and upload changes.
+
+See **[GitHub for a Group Project](capstone/11_github_group_projects.md)** for a beginner-friendly guide to:
+
+- creating one shared repository;
+- adding your teammates as collaborators;
+- cloning the group repository;
+- using `git pull`, `git add`, `git commit`, and `git push`;
+- avoiding Jupyter notebook conflicts;
+- handling rejected pushes and basic merge conflicts;
+- keeping API keys and private information out of GitHub.
+
+The everyday group workflow is:
+
+**pull → work → check → commit → push**
+
+For beginning groups, the most important rule is to avoid having two people edit the same `.ipynb` file at the same time.
+
 ## If you only want one notebook
 
 Use **Run in Colab** from the course website. This is often the quickest option if you do not need the whole repository.
