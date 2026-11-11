@@ -313,6 +313,28 @@ code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospac
 .capstone-section .section-kicker { color: #ffb096; }
 .capstone-section .section-heading > p:last-of-type { color: #dbe4ff; }
 .capstone-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: center; }
+.capstone-notice { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding: 24px; margin-block: 28px; border: 1px solid var(--border); border-left: 5px solid var(--uf-orange); border-radius: 14px; background: var(--surface-soft); }
+.capstone-notice > div { flex: 1 1 420px; }
+.capstone-notice p { margin: 7px 0 0; color: var(--muted); }
+#capstone { scroll-margin-top: 80px; }
+.capstone-deliverables { padding: 28px; border: 1px solid #6f8de0; border-radius: var(--radius); background: #00165f; }
+.capstone-deliverables h3 { margin: 0 0 18px; font-size: 1.4rem; }
+.capstone-deliverables dl { margin: 0; }
+.capstone-deliverables dl > div { padding: 14px 0; border-bottom: 1px solid #38559d; }
+.capstone-deliverables dt { font-weight: 850; }
+.capstone-deliverables dd { margin: 5px 0 0; color: #dbe4ff; }
+.capstone-deliverables > p { margin-bottom: 0; color: #dbe4ff; }
+.capstone-evidence { margin-top: 36px; padding: 24px 0; border-top: 1px solid #6f8de0; }
+.capstone-evidence h3 { margin: 0 0 8px; font-size: 1.4rem; }
+.capstone-evidence p { max-width: 850px; margin: 0; color: #dbe4ff; }
+.capstone-resource-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 8px; }
+.capstone-resource-grid a { display: block; padding: 22px; border: 1px solid #6f8de0; border-radius: 14px; background: #00165f; text-decoration: none; }
+.capstone-resource-grid a:hover { background: #082778; }
+.capstone-resource-grid a:focus-visible { outline: 3px solid #ffb096; outline-offset: 4px; }
+.capstone-resource-grid strong { display: block; text-decoration: underline; text-underline-offset: 3px; }
+.capstone-resource-grid span { display: block; margin-top: 8px; color: #dbe4ff; font-size: .9rem; }
+@media (max-width: 980px) { .capstone-resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .capstone-resource-grid { grid-template-columns: 1fr; } .capstone-notice { padding: 20px; } }
 .project-path { position: relative; margin: 0; padding: 0; list-style: none; }
 .project-path::before { content: ""; position: absolute; left: 23px; top: 24px; bottom: 24px; width: 2px; background: rgba(255,255,255,.24); }
 .project-path li { position: relative; display: grid; grid-template-columns: 48px 1fr; gap: 17px; align-items: center; padding: 13px 0; }
@@ -426,3 +448,4 @@ code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospac
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+

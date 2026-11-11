@@ -6,6 +6,16 @@ This is a **beginner capstone for a first Python/data-science course**. A strong
 
 [← Return to the course website](https://mathguy-uf.github.io/MAD2502/)
 
+## Finishing the Fall 2026 capstone
+
+**All final materials are due December 2, 2026.** Submit **one ZIP per group** containing the Python code, README, necessary ancillary files, and paper PDF. Canvas provides the exact cutoff time and submission locations.
+
+- **[Final submission checklist](12_final_checklist.md):** ZIP contents, paper versus presentation, sources, evidence, and responsible AI use.
+- **[Last-minute project tips](13_last_minute_tips.md):** check data, compare columns, evaluate predictions, verify numerical output, and reproduce results.
+- **[Update 2 checkpoint](14_update_2.md):** one group PDF showing actual data, code/output, a first result, an obstacle, and individual contributions.
+
+Your paper documents the full investigation. Your presentation demonstrates what works. For each main result, connect a **claim, an independent check, actual evidence, and a limitation**. Cite a main source and verify important claims beyond an AI answer or social-media feed.
+
 ## The 12-step beginner pathway
 
 Follow these steps in order. It is normal to move backward when the data teach you something new.
@@ -72,8 +82,9 @@ A failed experiment or analysis can still support a strong project when the team
 
 ## Current final-project expectations
 
-Unless Canvas gives a different current instruction, plan for:
+All final materials are due **December 2, 2026**. Unless Canvas gives a different current instruction, plan for:
 
+- **one ZIP per group** containing code, README, necessary ancillary files, and the paper as a PDF;
 - **one coherent group report**, roughly **5 pages per student**;
 - a **10–12 minute group presentation**;
 - clear, readable figures with informative labels/captions;
@@ -81,6 +92,8 @@ Unless Canvas gives a different current instruction, plan for:
 - reproducible instructions for obtaining the data and running the code;
 - **no API keys, passwords, or other secrets in the submission**;
 - accessible figures and presentation materials, including readable text, usable contrast, meaningful labels, and communication that does not rely on color alone.
+
+**If your group presented in class:** post a note on the Canvas discussion board saying you presented in class and attach the PowerPoint exported as a PDF. See the [final checklist](12_final_checklist.md) for details.
 
 “One coherent group report” means the document should read as one project, not as separate mini-reports pasted together by different teammates.
 
@@ -155,3 +168,4 @@ If Python or data science is still new, use the Applied Data materials:
 The goal is not to memorize commands. The goal is to learn a repeatable process for turning data into evidence.
 
 [← Return to the course website](https://mathguy-uf.github.io/MAD2502/)
+

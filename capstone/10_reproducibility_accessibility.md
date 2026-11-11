@@ -6,6 +6,12 @@
 
 A notebook that works only because of forgotten variables, hidden files, or an API key stored in the code is unfinished.
 
+## Final packaging
+
+All final materials are due **December 2, 2026**. Submit one group ZIP containing **code, README, necessary ancillary files, and the paper PDF**. Follow the [final submission checklist](12_final_checklist.md) and Canvas for the exact cutoff time and presentation/discussion submission.
+
+Test the **unzipped submission**, not only your working folder. Git's ignore rules do not remove files from a ZIP: inspect it for API keys, private data, missing inputs, and accidental extra files.
+
 ## Reproducibility checklist
 
 Before submitting the project:
@@ -13,7 +19,7 @@ Before submitting the project:
 - Record source URLs, access dates, licenses, row meaning, units, and important request parameters.
 - Explain how another person can obtain the data. If redistribution is allowed, include an appropriate snapshot; otherwise provide clear download/request instructions.
 - Use relative paths when possible so the project does not depend on one student's computer.
-- Provide a short README or equivalent run guide that states the file order and what each important file does.
+- Provide a README that states the file order and what each important file does.
 - List the packages needed to run the project. Record versions when they materially affect reproducibility.
 - Keep raw inputs unchanged when practical; save cleaned data and generated figures separately.
 - Set and record random seeds for simulations or randomized methods when reproducibility requires them.
@@ -101,3 +107,4 @@ Then have them restart the environment and reproduce one important result using 
 If they need information that exists only in your memory, add it to the documentation before submitting.
 
 [← Capstone home](README.md)
+

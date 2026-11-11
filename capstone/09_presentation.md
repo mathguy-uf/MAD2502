@@ -12,6 +12,27 @@ Unless Canvas gives a different current instruction, plan for a **10–12 minute
 
 That time belongs to the whole group. Rehearse the full presentation, including transitions between speakers, so the project finishes within the limit.
 
+All final materials are due **December 2, 2026**. If your group presented in class, post a note on the Canvas discussion board saying so and attach your PowerPoint exported as a PDF. See the [final checklist](12_final_checklist.md); Canvas controls the exact cutoff time and other presentation arrangements.
+
+## Demonstrate what works
+
+Show a running result or actual saved output that your group can reproduce. State the claim, show a known-answer test, independent comparison, or baseline, and explain the evidence and its limitations. Code that runs without an error is not, by itself, evidence that the result is correct.
+
+Present the functioning pieces you can explain and verify. Put the detailed record of unsuccessful approaches in the paper, while stating limitations that affect the meaning of the presented results in the talk too.
+
+### A suggested 11-minute plan
+
+This is an example allocation within the 10–12 minute window, not a required slide count or timing formula.
+
+| Time | Focus |
+|---|---|
+| 1 minute | Research question |
+| 1 minute | Main source and data |
+| 2 minutes | Computational method |
+| 4 minutes | Working demonstration or reproducible output |
+| 2 minutes | Independent check/comparison and limitations |
+| 1 minute | Supported conclusion |
+
 ## Plan the story before making slides
 
 A useful presentation path is:
@@ -99,6 +120,7 @@ Check:
 
 - Is the question stated early?
 - Does the audience know where the data came from?
+- Do we show an actual working result and a check supporting it?
 - Can every figure be read quickly?
 - Are transitions between speakers smooth?
 - Does the conclusion answer the original question?
@@ -132,3 +154,4 @@ Explain the entire project in three sentences without slides:
 Then ask a classmate to tell you what they think the project was about. If their answer differs from yours, simplify the presentation path.
 
 Next: [Reproducibility and Accessibility](10_reproducibility_accessibility.md)
+

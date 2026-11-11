@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0021A5">
   <meta name="description" content="MAD 2502 Computational Mathematics with Python course resources: lectures, applied data tutorials, capstone help, examples, and GitHub guidance.">
   <title>MAD 2502 | Computational Mathematics</title>
-  <link rel="stylesheet" href="style.css?v=1.0.1">
+  <link rel="stylesheet" href="style.css?v=1.1.0">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -37,7 +37,7 @@
           <h1>Computational Mathematics <span>with Python</span></h1>
           <p class="hero-lead">Learn the ideas, experiment with code, work with real data, and build a computational project of your own.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#current">Explore a featured lecture</a>
+            <a class="button button-primary" href="#capstone">Finish your capstone</a>
             <a class="button button-secondary" href="#github">New to GitHub?</a>
           </div>
           <div class="hero-tags" aria-label="Course topics">
@@ -59,6 +59,11 @@ result = analyze(data)
         </aside>
       </div>
     </section>
+
+    <aside class="capstone-notice page-shell" aria-label="Fall 2026 capstone deadline">
+      <div><strong>Fall 2026 capstone · All final materials due <time datetime="2026-12-02">December 2, 2026</time></strong><p>One group ZIP: code, README, necessary ancillary files, and paper PDF. Check Canvas for the exact cutoff time.</p></div>
+      <a class="button button-primary" href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/12_final_checklist.md">Final submission checklist</a>
+    </aside>
 
     <section class="current-section" id="current" aria-labelledby="current-title">
       <div class="page-shell">
@@ -156,15 +161,37 @@ result = analyze(data)
     </section>
 
     <section class="content-section capstone-section" id="capstone" aria-labelledby="capstone-title">
-      <div class="page-shell capstone-grid">
-        <div class="section-heading"><p class="section-kicker">BUILD SOMETHING</p><h2 id="capstone-title">Capstone Project</h2><p>Your project is not a straight line. Good computational work includes changed questions, failed ideas, and better approaches.</p><a class="button button-light" href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/README.md">Open capstone guide</a></div>
-        <ol class="project-path" aria-label="Capstone project process">
-          <li><span>1</span><div><strong>Question</strong><small>Choose something worth investigating.</small></div></li>
-          <li><span>2</span><div><strong>Sources</strong><small>Find reliable data and references.</small></div></li>
-          <li><span>3</span><div><strong>First result</strong><small>Get one meaningful Python result working.</small></div></li>
-          <li><span>4</span><div><strong>Explore</strong><small>Analyze, revise, make mistakes, and learn.</small></div></li>
-          <li><span>5</span><div><strong>Tell the story</strong><small>Make the report and presentation coherent.</small></div></li>
-        </ol>
+      <div class="page-shell">
+        <div class="capstone-grid">
+          <div class="section-heading">
+            <p class="section-kicker">FALL 2026 · FINAL PROJECT</p>
+            <h2 id="capstone-title">Document the research.<br>Demonstrate the results.</h2>
+            <p>Your paper tells the full research story, including meaningful failures. Your presentation shows what works and the evidence supporting it.</p>
+            <p><strong>All final materials are due <time datetime="2026-12-02">December 2, 2026</time>.</strong> Canvas has the exact cutoff time and submission locations.</p>
+            <a class="button button-light" href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/12_final_checklist.md">Open final submission checklist</a>
+          </div>
+          <div class="capstone-deliverables">
+            <h3>What your group submits</h3>
+            <dl>
+              <div><dt>One ZIP</dt><dd>Python code, README, necessary ancillary files, and the paper as a PDF.</dd></div>
+              <div><dt>One coherent paper</dt><dd>Roughly 5 pages per student: sources, methods, decisions, successful and unsuccessful attempts, results, and limits.</dd></div>
+              <div><dt>10–12 minute presentation</dt><dd>For the whole group. Show a working result, an independent check or comparison, and a supported conclusion.</dd></div>
+            </dl>
+            <p><strong>Presented in class?</strong> Post a note on the Canvas discussion board and attach your PowerPoint exported as a PDF.</p>
+          </div>
+        </div>
+        <div class="capstone-evidence">
+          <h3>Convince me that your research works</h3>
+          <p><strong>Claim → check → evidence → limit.</strong> Cite the main source. Verify important claims beyond an AI answer. Have a teammate reproduce the central result using your README.</p>
+        </div>
+        <nav class="capstone-resource-grid" aria-label="Capstone resources">
+          <a href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/README.md"><strong>Full capstone guide</strong><span>Follow the pathway from a question to a reproducible project.</span></a>
+          <a href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/13_last_minute_tips.md"><strong>Last-minute project tips</strong><span>Data checks, 80/20 splits, pair plots, baselines, and numerical checks.</span></a>
+          <a href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/08_final_report.md"><strong>Write the paper</strong><span>Tell the full research story, including useful failures and decisions.</span></a>
+          <a href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/09_presentation.md"><strong>Build the presentation</strong><span>Plan a 10–12 minute talk around working results and verification.</span></a>
+          <a href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/14_update_2.md"><strong>Update 2 checkpoint</strong><span>Show actual data, code, output, a first result, and team progress.</span></a>
+          <a href="https://github.com/mathguy-uf/MAD2502/blob/main/capstone/11_github_group_projects.md"><strong>GitHub for group projects</strong><span>Share code and notebooks without overwriting teammates' work.</span></a>
+        </nav>
       </div>
     </section>
 
@@ -245,3 +272,4 @@ result = analyze(data)
   <script src="script.js?v=1.0.0"></script>
 </body>
 </html>
+

@@ -95,6 +95,8 @@ git status
 
 ## Working on a group project
 
+**Finishing the Fall 2026 capstone?** All final materials are due **December 2, 2026**. Start with the [final submission checklist](capstone/12_final_checklist.md) and [last-minute project tips](capstone/13_last_minute_tips.md). Check Canvas for the exact cutoff time and submission locations.
+
 The workflow above is for **using the instructor's course repository**. A capstone group is different because your teammates need to share and upload changes.
 
 See **[GitHub for a Group Project](capstone/11_github_group_projects.md)** for a beginner-friendly guide to:
@@ -175,3 +177,4 @@ That file should remain ignored by Git and should not be committed to a public r
 ---
 
 [Return to the MAD 2502 course website](./)
+

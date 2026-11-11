@@ -14,16 +14,19 @@ For example, a three-person group should think in terms of roughly fifteen pages
 
 The report should read as one unified project with consistent terminology, notation, figure style, and conclusions.
 
+Submit the paper **as a PDF inside the group's final ZIP**, alongside code, README, and necessary ancillary files. All final materials are due **December 2, 2026**; see the [submission checklist](12_final_checklist.md) and Canvas for the exact cutoff time and submission location.
+
 ## A useful structure
 
 1. **Question and motivation** — What did you investigate, and why is the question worth asking?
 2. **Background and cited sources** — Explain unfamiliar ideas and cite the sources you actually checked.
 3. **Data** — Give the source, access date, population/time period, row meaning, important variables, units, and missingness.
 4. **Research tree and methods** — Explain how the project changed: sources tried, important mistakes, failed approaches, cleaning decisions, revised questions, and why the final analysis was chosen.
-5. **Results** — Present selected tables and figures with captions and plain-language interpretation.
+5. **Results and verification** — Present selected tables and figures with captions and plain-language interpretation. Explain a known-answer check, independent calculation, trusted comparison, or baseline supporting your main result.
 6. **Limitations** — Explain what the evidence cannot establish, including limitations caused by data quality, sampling, missingness, modeling assumptions, or abandoned approaches.
 7. **Conclusion and next steps** — Answer the question at the scale supported by the evidence.
-8. **Reproducibility notes and references** — Explain how to obtain the data, run the code, and reproduce the main results; include complete citations.
+8. **Team contributions** — State what each group member contributed to the investigation.
+9. **Reproducibility notes and references** — Explain how to obtain the data, run the code, and reproduce the main results; include complete citations.
 
 Do not pad the report with unexplained code, repeated graphs, or a chronological list of every small debugging mistake.
 
@@ -58,6 +61,8 @@ A figure is not complete until the report explains its main takeaway and its lim
 
 ## Cite sources where they are used
 
+Identify the **main source** anchoring the project: an original dataset, research paper, or official documentation. Record the author/provider, title, URL or DOI, and access date as appropriate. Explain what the source supports. Verify that a cited reference exists and says what you claim; an AI-generated citation is not evidence by itself.
+
 Cite:
 
 - datasets and APIs;
@@ -87,7 +92,7 @@ See [Reproducibility and Accessibility](10_reproducibility_accessibility.md) for
 
 Use real heading styles, readable tables with header rows, meaningful link text, and figure captions that summarize the finding. Include text alternatives for essential visuals where the submission format supports them. Check exported documents for readable fonts, usable contrast, correct reading order, and legible mathematical notation.
 
-Check the current course policy before using AI assistance. Verify citations, code, calculations, and claims yourself, and disclose assistance as required. Do not upload private student records or restricted data to an AI tool.
+Check the current course policy before using AI assistance. Verify citations, code, calculations, and claims yourself, and disclose assistance as required. Do not upload private student records or restricted data to an unapproved AI tool. Follow the [data-handling guidance in the final checklist](12_final_checklist.md#sources-research-notes-and-ai-assistance) and obtain the appropriate permissions before using sensitive or restricted information.
 
 ## Final report check
 
@@ -104,3 +109,4 @@ Before submitting, a teammate should be able to answer yes to all of these:
 - Have all API keys, passwords, and secrets been removed?
 
 Next: [Build the Presentation](09_presentation.md)
+

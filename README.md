@@ -18,6 +18,16 @@ The primary student interface is the GitHub Pages course site:
 
 Students should normally begin there rather than browsing the repository file tree.
 
+## Fall 2026 capstone: finish and submit
+
+**All final materials are due December 2, 2026.** Submit **one ZIP per group** containing Python code, README, necessary ancillary files, and the paper as a PDF. Check Canvas for the exact cutoff time and submission locations.
+
+- [Final submission checklist](capstone/12_final_checklist.md) — paper, presentation, ZIP, sources, and verification.
+- [Last-minute project tips](capstone/13_last_minute_tips.md) — data checks, 80/20 splits for prediction, pair plots, baselines, and reproducibility.
+- [Update 2: show real progress](capstone/14_update_2.md) — actual data, code/output, a first result, obstacles, and contributions.
+
+The **paper** records the full research story (roughly **5 pages per student**, in one group report). The **presentation** demonstrates working results and supporting evidence (**10–12 minutes for the whole group**). If you presented in class, post a note on the Canvas discussion board and attach your slides exported as a PDF.
+
 ## Start here
 
 New to Git, GitHub, Jupyter, Colab, or Binder?
@@ -68,3 +78,4 @@ Never commit API keys, passwords, tokens, private student information, or other 
 
 **Department of Mathematics — University of Florida**  
 Course materials by Jason Harrington.
+
