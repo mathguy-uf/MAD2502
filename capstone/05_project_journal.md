@@ -36,7 +36,7 @@ Keep the labels exactly this simple. Short entries are fine.
 
 ```text
 Date:
-October 12
+[record the date of your work session]
 
 Who worked today:
 Team members A and B
