@@ -18,9 +18,9 @@ The primary student interface is the GitHub Pages course site:
 
 Students should normally begin there rather than browsing the repository file tree.
 
-## Fall 2026 capstone: finish and submit
+## Capstone: finish and submit
 
-**All final materials are due December 2, 2026.** Submit **one ZIP per group** containing Python code, README, necessary ancillary files, and the paper as a PDF. Check Canvas for the exact cutoff time and submission locations.
+Submit **one ZIP per group** containing Python code, README, necessary ancillary files, and the paper as a PDF. Follow Canvas for official submission instructions.
 
 - [Final submission checklist](capstone/12_final_checklist.md) — paper, presentation, ZIP, sources, and verification.
 - [Last-minute project tips](capstone/13_last_minute_tips.md) — data checks, 80/20 splits for prediction, pair plots, baselines, and reproducibility.
