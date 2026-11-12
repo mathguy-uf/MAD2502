@@ -6,9 +6,9 @@ This is a **beginner capstone for a first Python/data-science course**. A strong
 
 [← Return to the course website](https://mathguy-uf.github.io/MAD2502/)
 
-## Finishing the Fall 2026 capstone
+## Finishing the capstone
 
-**All final materials are due December 2, 2026.** Submit **one ZIP per group** containing the Python code, README, necessary ancillary files, and paper PDF. Canvas provides the exact cutoff time and submission locations.
+Submit **one ZIP per group** containing the Python code, README, necessary ancillary files, and paper PDF. Follow Canvas for official submission instructions.
 
 - **[Final submission checklist](12_final_checklist.md):** ZIP contents, paper versus presentation, sources, evidence, and responsible AI use.
 - **[Last-minute project tips](13_last_minute_tips.md):** check data, compare columns, evaluate predictions, verify numerical output, and reproduce results.
@@ -82,7 +82,7 @@ A failed experiment or analysis can still support a strong project when the team
 
 ## Current final-project expectations
 
-All final materials are due **December 2, 2026**. Unless Canvas gives a different current instruction, plan for:
+Unless Canvas gives a different current instruction, plan for:
 
 - **one ZIP per group** containing code, README, necessary ancillary files, and the paper as a PDF;
 - **one coherent group report**, roughly **5 pages per student**;
@@ -137,7 +137,7 @@ That is not automatically a failure. Record it in the [Project Journal](05_proje
 
 ## What Canvas controls
 
-The expectations above describe the current capstone structure. Canvas remains authoritative if it gives a different due date, page requirement, presentation time, grading rule, submission instruction, or course-specific AI-use requirement.
+The expectations above describe the general capstone structure. Canvas remains authoritative for requirements, grading, submission instructions, and course-specific AI-use rules.
 
 ## Working with your group on GitHub
 
