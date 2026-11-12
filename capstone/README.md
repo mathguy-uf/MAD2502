@@ -12,7 +12,8 @@ Submit **one ZIP per group** containing the Python code, README, necessary ancil
 
 - **[Final submission checklist](12_final_checklist.md):** ZIP contents, paper versus presentation, sources, evidence, and responsible AI use.
 - **[Last-minute project tips](13_last_minute_tips.md):** check data, compare columns, evaluate predictions, verify numerical output, and reproduce results.
-- **[Update 2 checkpoint](14_update_2.md):** one group PDF showing actual data, code/output, a first result, an obstacle, and individual contributions.
+- **[Update 2 checkpoint](14_update_2.md):** show what changed since the first update, actual data, code/output, a first result, an obstacle, and individual contributions.
+- **[When a data source goes down](15_data_source_recovery.md):** diagnose an outage, use authorized mirrors or archives, preserve a dataset snapshot, and adjust your research question responsibly.
 
 Your paper documents the full investigation. Your presentation demonstrates what works. For each main result, connect a **claim, an independent check, actual evidence, and a limitation**. Cite a main source and verify important claims beyond an AI answer or social-media feed.
 
@@ -34,6 +35,16 @@ Follow these steps in order. It is normal to move backward when the data teach y
 | **10** | Write the final report | [Final Report](08_final_report.md) | A documented account of the larger research process and final evidence |
 | **11** | Give the presentation | [Presentation](09_presentation.md) | One clean path through the project focused on the strongest evidence |
 | **12** | Check reproducibility and accessibility | [Reproducibility & Accessibility](10_reproducibility_accessibility.md) | A fresh run plus a readability/accessibility check |
+
+### Your immediate priorities
+
+1. **Get one small result working.** Load a small, real dataset and make a meaningful count, table, figure, or calculation.
+2. **Check that the result is credible.** Verify a sample by hand, compare with an independent computation or baseline, or examine an edge case.
+3. **Document changes from your initial plan.** If your research question, dataset, or method changed, explain the evidence that prompted that decision.
+4. **Prepare two different explanations.** The paper should document the meaningful research branches (including failed attempts); the presentation should follow one clear path through what works.
+5. **Make it reproducible.** Have a teammate run the central analysis from a clean copy using your README.
+
+A small project that works and has been checked is more convincing than an ambitious program whose output you cannot explain.
 
 ### The most important rule
 
