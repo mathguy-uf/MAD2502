@@ -8,7 +8,7 @@ A notebook that works only because of forgotten variables, hidden files, or an A
 
 ## Final packaging
 
-All final materials are due **December 2, 2026**. Submit one group ZIP containing **code, README, necessary ancillary files, and the paper PDF**. Follow the [final submission checklist](12_final_checklist.md) and Canvas for the exact cutoff time and presentation/discussion submission.
+Submit one group ZIP containing **code, README, necessary ancillary files, and the paper PDF**. Follow the [final submission checklist](12_final_checklist.md) and Canvas for official submission and presentation instructions.
 
 Test the **unzipped submission**, not only your working folder. Git's ignore rules do not remove files from a ZIP: inspect it for API keys, private data, missing inputs, and accidental extra files.
 
