@@ -14,20 +14,20 @@
 
 **Do not manufacture or silently replace missing scientific observations.** Missing data, a failed request, and a measured value of zero mean different things.
 
-## November 2026 example: SIMBAD and the CDS disruption
+## Astronomy example: SIMBAD and alternative archives
 
-**Status checked November 12, 2026; check again before using these links.** The [Centre de Données astronomiques de Strasbourg (CDS) service notice](https://cds.unistra.fr/) says a cybersecurity incident has degraded access to SIMBAD, VizieR, and other Strasbourg-hosted services. It lists official temporary mirrors.
+If SIMBAD or another CDS service is unavailable, check the [official CDS service notice](https://cds.unistra.fr/) first. During service disruptions, CDS may provide alternate mirror servers. Availability and synchronization vary, so verify the source and query results before relying on them.
 
 | If you need... | Try this source | Important distinction |
 |---|---|---|
-| **SIMBAD object identification, names, coordinates, and object types** | [SIMBAD at CfA/Harvard](https://simbad.cfa.harvard.edu/simbad/) or [SIMBAD at IDIA](https://simbad.idia.ac.za/) | These are SIMBAD mirrors: try them before redesigning the project. The CfA mirror's data are reported as ingested through **October 14, 2026**. |
+| **SIMBAD object identification, names, coordinates, and object types** | [SIMBAD at CfA/Harvard](https://simbad.cfa.harvard.edu/simbad/) or [SIMBAD at IDIA](https://simbad.idia.ac.za/) | These are SIMBAD mirrors: try them before redesigning the project. Mirrors may lag behind the primary database; check coverage and update information. |
 | **SIMBAD TAP/programmatic queries** | [CfA SIMBAD TAP](https://simbad.cfa.harvard.edu/simbad/sim-tap/) or [IDIA SIMBAD TAP](https://simbad.idia.ac.za/simbad/sim-tap/) | Record which mirror you use and verify the fields returned. |
 | **Published astronomical catalogs** | [VizieR at CfA](https://vizier.cfa.harvard.edu/viz-bin/VizieR) or [VizieR at IDIA](https://vizier.idia.ac.za/viz-bin/VizieR) | Choose a specific catalog, read its documentation, and check units. Some large catalogs are not present on every mirror. |
 | **Star positions, brightness, parallax, and proper motion** | [ESA Gaia Archive](https://gea.esac.esa.int/archive/) | Gaia is not a drop-in replacement for SIMBAD's object classification; first check that your question matches Gaia's fields. |
 | **Space-telescope observations and selected catalogs** | [NASA MAST](https://mast.stsci.edu/) and [astroquery MAST documentation](https://astroquery.readthedocs.io/en/latest/mast/mast.html) | MAST is especially useful for mission observations and associated products, not necessarily the same SIMBAD fields. |
 | **Confirmed exoplanets and planetary-system parameters** | [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/) and [TAP instructions](https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html) | Useful for exoplanet questions; not a general replacement for a stellar-object catalog. |
 
-**Important deadline warning:** ESA has announced that the **Gaia Archive is scheduled to be unavailable November 25–December 2, 2026**, during preparations for Gaia DR4. This overlaps the **December 2 capstone deadline**. If your project uses Gaia, obtain the necessary permitted data and documentation *before November 25*. Check [ESA's Gaia news](https://www.cosmos.esa.int/web/gaia/news) for schedule changes.
+**Maintenance warning:** Scientific archives sometimes have planned outages or data-release transitions. Check [ESA's Gaia news](https://www.cosmos.esa.int/web/gaia/news) and the archive status, then save permitted data and documentation locally before depending on a live service.
 
 ### Small Python example: use a SIMBAD mirror
 
