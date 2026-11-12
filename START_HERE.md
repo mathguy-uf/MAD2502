@@ -95,7 +95,7 @@ git status
 
 ## Working on a group project
 
-**Finishing the Fall 2026 capstone?** All final materials are due **December 2, 2026**. Start with the [final submission checklist](capstone/12_final_checklist.md) and [last-minute project tips](capstone/13_last_minute_tips.md). Check Canvas for the exact cutoff time and submission locations.
+**Finishing your capstone?** Start with the [final submission checklist](capstone/12_final_checklist.md), [practical project tips](capstone/13_last_minute_tips.md), and [data-source recovery guide](capstone/15_data_source_recovery.md). Follow Canvas for official submission instructions.
 
 The workflow above is for **using the instructor's course repository**. A capstone group is different because your teammates need to share and upload changes.
 
