@@ -1,8 +1,8 @@
-# Final Capstone Submission — Fall 2026
+# Final Capstone Submission
 
 [Capstone home](README.md) · [Last-minute tips](13_last_minute_tips.md)
 
-**All final capstone materials are due December 2, 2026.** Check Canvas for the submission location, exact cutoff time, presentation arrangements, and any later instructor updates.
+Follow Canvas for official submission instructions, presentation arrangements, and instructor updates.
 
 ## Submit one ZIP per group
 
@@ -30,7 +30,7 @@ Use the [project README template](../templates/project_readme.md) and [reproduci
 
 Discuss limitations that affect your conclusion in both products. A failed experiment can still be valuable when you explain the method, evidence, and what the result does and does not establish.
 
-**If your group presented in class:** post a note on the Canvas discussion board saying that you presented in class and attach your PowerPoint exported as a PDF. Follow Canvas instructions for other presentation arrangements. All final materials are due December 2.
+**If your group presented in class:** post a note on the Canvas discussion board saying that you presented in class and attach your PowerPoint exported as a PDF. Follow Canvas instructions for other presentation arrangements.
 
 ## Convince me that your research works
 
@@ -64,6 +64,6 @@ For numerical work, compare with a known solution or examine error as the step s
 - [ ] Check the exported paper and slide PDFs for readable text and logical reading order.
 - [ ] Rehearse the full 10–12 minute group presentation and keep a backup of demonstration output.
 - [ ] Confirm the ZIP contains code, README, necessary ancillary files, and the paper PDF, with no secrets.
-- [ ] Complete the applicable presentation/discussion submission in Canvas by December 2.
+- [ ] Complete the applicable presentation/discussion submission according to Canvas instructions.
 
 [Final report guide](08_final_report.md) · [Presentation guide](09_presentation.md) · [GitHub group workflow](11_github_group_projects.md)
