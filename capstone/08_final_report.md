@@ -14,7 +14,7 @@ For example, a three-person group should think in terms of roughly fifteen pages
 
 The report should read as one unified project with consistent terminology, notation, figure style, and conclusions.
 
-Submit the paper **as a PDF inside the group's final ZIP**, alongside code, README, and necessary ancillary files. All final materials are due **December 2, 2026**; see the [submission checklist](12_final_checklist.md) and Canvas for the exact cutoff time and submission location.
+Submit the paper **as a PDF inside the group's final ZIP**, alongside code, README, and necessary ancillary files. See the [submission checklist](12_final_checklist.md) and follow Canvas for official submission instructions.
 
 ## A useful structure
 
