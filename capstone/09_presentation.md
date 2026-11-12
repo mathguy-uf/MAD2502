@@ -12,7 +12,7 @@ Unless Canvas gives a different current instruction, plan for a **10–12 minute
 
 That time belongs to the whole group. Rehearse the full presentation, including transitions between speakers, so the project finishes within the limit.
 
-All final materials are due **December 2, 2026**. If your group presented in class, post a note on the Canvas discussion board saying so and attach your PowerPoint exported as a PDF. See the [final checklist](12_final_checklist.md); Canvas controls the exact cutoff time and other presentation arrangements.
+If your group presented in class, post a note on the Canvas discussion board saying so and attach your PowerPoint exported as a PDF. See the [final checklist](12_final_checklist.md), and follow Canvas for presentation and submission arrangements.
 
 ## Demonstrate what works
 
