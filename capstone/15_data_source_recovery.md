@@ -37,7 +37,7 @@ If your existing code uses `astroquery.simbad`, the CDS notice documents selecti
 from astroquery.simbad import Simbad
 
 simbad = Simbad()
-simbad.server = "simbad.cfa.harvard.edu"
+simbad.server = "simbad.harvard.edu"
 result = simbad.query_object("Vega")
 
 if result is None or len(result) == 0:
